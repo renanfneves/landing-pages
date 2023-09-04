@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@landing-pages/ui-library": ["libs/ui-library/src/index.ts"],
+      "@landing-pages/ui-library/*": ["libs/ui-library/src/*"],
+    }
+  }
+}
