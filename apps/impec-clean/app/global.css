@@ -94,3 +94,15 @@ body {
 .max-width {
   @apply max-w-[1440px] mx-auto;
 }
+
+.padding-x {
+  @apply sm:px-16 px-6;
+}
+
+.padding-y {
+  @apply py-4;
+}
+
+.flex-center {
+  @apply flex items-center justify-center;
+}
