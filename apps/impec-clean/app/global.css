@@ -73,36 +73,54 @@
 @layer base {
   * {
     @apply border-border;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-size: 16px;
+    line-height: 150%;
+    min-width: 20rem;
   }
-}
-
-body {
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.max-width {
-  @apply max-w-[1440px] mx-auto;
-}
-
-.padding-x {
-  @apply sm:px-16 px-6;
-}
-
-.padding-y {
-  @apply py-4;
+  h1 {
+    font-size: 3rem;
+    line-height: 120%;
+  }
+  h2 {
+    font-size: 2.5rem;
+    line-height: 120%;
+  }
+  h3 {
+    font-size: 2rem;
+    line-height: 130%;
+  }
+  h4 {
+    font-size: 1.5rem;
+    line-height: 140%;
+  }
+  h5 {
+    font-size: 1.25rem;
+    line-height: 140%;
+  }
+  h6 {
+    font-size: 1.25rem;
+    line-height: 150%;
+  }
 }
 
 .flex-center {
   @apply flex items-center justify-center;
+}
+
+.hidden-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.hidden-scrollbar::-webkit-scrollbar {
+  display: none;
 }

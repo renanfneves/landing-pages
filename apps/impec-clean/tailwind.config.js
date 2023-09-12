@@ -22,6 +22,11 @@ module.exports = {
       },
     },
     extend: {
+      width: {
+        'carousel': "calc(100% + 1.5rem)",
+        'carousel-md': "calc(100% + 4rem)",
+        100: '25rem'
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

@@ -12,15 +12,14 @@ export function TestimonialCard({
   city
  }: TestimonialCardProps) {
   return (
-    <div className="keen-slider__slide h-96 p-8">
-      <div className="border border-zinc-400 p-4">
-        {starsGiven}
-        <blockquote>
-            {`"${comment}"`}
-            <footer className="flex flex-col mt-4">
-                <cite>{author},</cite> <cite>{city}</cite>
-            </footer>
-        </blockquote>
-      </div>
-    </div>)
+    <div className="flex border border-zinc-400 p-4 h-52 w-96">
+      {starsGiven}
+      <blockquote>
+          {`"${comment}"`}
+          <footer className="flex flex-col mt-4">
+              <cite>{author},</cite> <cite>{city}</cite>
+          </footer>
+      </blockquote>
+    </div>
+  )
 }
