@@ -1,7 +1,9 @@
+import { ReactNode } from "react"
+
 interface HeroTextProps {
-  text: string
+  children: ReactNode
 }
 
-export function HeroText({ text }: HeroTextProps) {
-  return <div>{text}</div>
+export function HeroText({ children }: HeroTextProps) {
+  return <h2 className="text-white text-base text-center">{children}</h2>
 }

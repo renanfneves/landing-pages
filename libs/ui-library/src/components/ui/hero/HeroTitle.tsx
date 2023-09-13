@@ -1,7 +1,9 @@
+import { ReactNode } from "react"
+
 interface HeroTitleProps {
-  title: string
+  children: ReactNode
 }
 
-export function HeroTitle({ title }: HeroTitleProps) {
-  return <div>{title}</div>
+export function HeroTitle({ children }: HeroTitleProps) {
+  return <h1 className="text-white text-[3.4rem] text-center">{children}</h1>
 }
