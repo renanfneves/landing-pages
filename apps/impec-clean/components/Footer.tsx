@@ -17,22 +17,22 @@ export function Footer() {
         </nav>
         <ul className="flex gap-1">
           <li>
-            <a href="/">
+            <a href="https://www.facebook.com/impeccleanbraga" target="_blank">
               <Image src={Facebook} alt="Impec Clean logo" sizes="40" height={40}></Image>
             </a>
           </li>
           <li>
-            <a href="/">
+            <a href="https://www.instagram.com/impec.clean/" target="_blank">
               <Image src={Instagram} alt="Impec Clean logo" sizes="40" height={40}></Image>
             </a>
           </li>
           <li>
-            <a href="/">
+            <a href="https://www.linkedin.com/in/impec-clean-603baa281/" target="_blank">
               <Image src={LinkedIn} alt="Impec Clean logo" sizes="40" height={40}></Image>
             </a>
           </li>
           <li>
-            <a href="/">
+            <a href="https://www.youtube.com/channel/UCCKGeHMlMm4ZyrfldVRylGA" target="_blank">
               <Image src={Youtube} alt="Impec Clean logo" sizes="40" height={40}></Image>
             </a>
           </li>
