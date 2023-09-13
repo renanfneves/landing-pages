@@ -15,9 +15,9 @@ export function OurContacts() {
         <address className="mt-auto underline text-sm">geral@rimpecclean.pt</address>
       </address>
       <address className="flex items-center flex-col gap-4 w-100 md:h-44">
-        <a className="flex-center flex-col gap-4" href="http://wa.me/+351932270602?text=Ola%20equipa%20Impec%20Clean,%0AGostava%20de%20saber%20mais%20sobre%20o%20vosso%20trabalho." target="_blank">
-        <Image src={Phone} width={30} height={30} alt="Impec Clean phone" />
-        <span>Whatsapp</span>
+        <a className="flex-center flex-col gap-4" href="http://wa.me/+351932270602?text=Olá%20equipa%20Impec%20Clean,%0AComo%20posso%20fazer%20um%20orçamento%20personalizado%20e%20gratuito?" target="_blank">
+          <Image src={Phone} width={30} height={30} alt="Impec Clean phone" />
+          <span>Whatsapp</span>
         </a>
         <p className="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in ero.</p>
         <address className="mt-auto underline text-sm">+(351) 000-000-000</address>
