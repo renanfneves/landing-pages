@@ -1,3 +1,6 @@
 export * from './components/ui/button'
+export * from './components/ui/input'
+export * from './components/ui/textarea'
+export * from './components/ui/label'
 export { Hero } from './components/ui/Hero/Hero'
 export { GraphicArticle } from  './components/ui/GraphicArticle/GraphicArticle'

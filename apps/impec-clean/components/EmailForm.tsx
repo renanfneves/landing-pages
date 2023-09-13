@@ -1,6 +1,6 @@
 'use client'
 
-import { GraphicArticle } from "@landing-pages/ui-library"
+import { GraphicArticle, Input, Label, Textarea } from "@landing-pages/ui-library"
 import BackgroundImage from '../assets/hero-image.webp'
 import { ChangeEvent, FormEvent, useReducer } from "react"
 
@@ -69,13 +69,22 @@ export function EmailForm() {
     <GraphicArticle.Root>
       <GraphicArticle.ContentRoot>
         <h2>Contacte-nos</h2>
-        <p>
-        Não encontra o que procura? Deixe-nos o seu e-mail abaixo.
-        </p>
-        <form className="flex flex-col" onSubmit={handleSubmit}>
-          <input type="name" value={formState.name} onChange={handleInputName} />
-          <input type="name" value={formState.email} onChange={handleInputEmail} />
-          <textarea value={formState.message} onChange={handleInputMessage} />
+        <p>Não encontra o que procura? Deixe-nos o seu e-mail abaixo.</p>
+        <form className="flex flex-col gap-8 mt-8" onSubmit={handleSubmit}>
+          <div className="grid w-full items-center gap-1.5">
+            <Label htmlFor="name">Nome</Label>
+            <Input name="name" value={formState.name} onChange={handleInputName} className="border border-black" />
+          </div>
+
+          <div className="grid w-full items-center gap-1.5">
+            <Label htmlFor="email">Email</Label>
+            <Input name="email" value={formState.email} onChange={handleInputEmail} className="border border-black" />
+          </div>
+
+          <div className="grid w-full items-center gap-1.5">
+            <Label htmlFor="message">Mensagem</Label>
+            <Textarea name="message" value={formState.message} onChange={handleInputMessage} className="border border-black" />
+          </div>
         </form>
       </GraphicArticle.ContentRoot>
       <GraphicArticle.Image
