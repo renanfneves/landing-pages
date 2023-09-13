@@ -73,17 +73,17 @@ export function EmailForm() {
         <form className="flex flex-col gap-8 mt-8" onSubmit={handleSubmit}>
           <div className="grid w-full items-center gap-1.5">
             <Label htmlFor="name">Nome</Label>
-            <Input name="name" value={formState.name} onChange={handleInputName} className="border border-black" />
+            <Input name="name" id="name" value={formState.name} onChange={handleInputName} className="border border-black" />
           </div>
 
           <div className="grid w-full items-center gap-1.5">
             <Label htmlFor="email">Email</Label>
-            <Input name="email" value={formState.email} onChange={handleInputEmail} className="border border-black" />
+            <Input name="email" id="email" value={formState.email} onChange={handleInputEmail} className="border border-black" />
           </div>
 
           <div className="grid w-full items-center gap-1.5">
             <Label htmlFor="message">Mensagem</Label>
-            <Textarea name="message" value={formState.message} onChange={handleInputMessage} className="border border-black" />
+            <Textarea name="message" id="message" value={formState.message} onChange={handleInputMessage} className="border border-black" />
           </div>
         </form>
       </GraphicArticle.ContentRoot>
