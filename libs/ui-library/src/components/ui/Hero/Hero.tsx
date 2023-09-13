@@ -7,5 +7,5 @@ export const Hero = {
   Root: HeroRoot,
   Title: HeroTitle,
   Text: HeroText,
-  CallToAction: HeroCallToAction
+  CallToAction: HeroCallToAction,
 }
