@@ -20,14 +20,15 @@ export function OurContacts() {
           <span>Whatsapp</span>
         </a>
         <p className="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in ero.</p>
-        <address className="mt-auto underline text-sm">+(351) 000-000-000</address>
+        <address className="mt-auto underline text-sm">+(351) 932-270-602</address>
       </address>
       <address className="flex items-center flex-col gap-4 w-100 md:h-44">
-        <a className="flex-center flex-col gap-4" href="mailto:john@doe.com">
+        <a className="flex-center flex-col gap-4" href="https://goo.gl/maps/wWTCU7EcFVPFeMNB8">
           <Image src={MapPin} width={30} height={30} alt="Impec Clean address" />
           <span>Onde estamos</span>
         </a>
         <p className="text-center">Distritos de Porto, Braga e Viana do Castelo</p>
+        <address className="mt-auto underline text-sm">R. Padre António Vieira 122 2dto, 4710-412 Braga</address>
       </address>
     </article>
   )
