@@ -1,7 +1,7 @@
 import Image from "next/image"
-import Envelop from '../public/assets/envelope.svg'
-import Phone from '../public/assets/phone.svg'
-import MapPin from '../public/assets/map-pin.svg'
+import Envelop from '../assets/envelope.svg'
+import Phone from '../assets/phone.svg'
+import MapPin from '../assets/map-pin.svg'
 
 export function OurContacts() {
   return (

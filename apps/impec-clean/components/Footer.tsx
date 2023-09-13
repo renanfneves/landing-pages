@@ -1,9 +1,9 @@
 import Image from "next/image"
 import Link from "next/link"
-import Facebook from '../public/assets/facebook.svg'
-import Instagram from '../public/assets/instagram.svg'
-import LinkedIn from '../public/assets/linkedIn.svg'
-import Youtube from '../public/assets/youtube.svg'
+import Facebook from '../assets/facebook.svg'
+import Instagram from '../assets/instagram.svg'
+import LinkedIn from '../assets/linkedIn.svg'
+import Youtube from '../assets/youtube.svg'
 
 export function Footer() {
   return (

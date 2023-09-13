@@ -1,7 +1,7 @@
 import { GraphicArticle } from "@landing-pages/ui-library"
 import BackgroundImage from '../assets/hero-image.webp'
 import Image from "next/image"
-import SVGCube from "../public/assets/3d-cube.svg";
+import SVGCube from "../assets/3d-cube.svg";
 
 
 export function AboutUs() {
