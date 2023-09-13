@@ -2,7 +2,7 @@
 
 import { GraphicArticle } from "@landing-pages/ui-library"
 import BackgroundImage from '../assets/hero-image.webp'
-import { ChangeEvent, useReducer } from "react"
+import { ChangeEvent, FormEvent, useReducer } from "react"
 
 type FormState = {
   name: string
@@ -61,6 +61,10 @@ export function EmailForm() {
     dispatch({ type: Actions.UpdateMessage, payload })
   }
 
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+  }
+
   return (
     <GraphicArticle.Root>
       <GraphicArticle.ContentRoot>
@@ -68,7 +72,7 @@ export function EmailForm() {
         <p>
         Não encontra o que procura? Deixe-nos o seu e-mail abaixo.
         </p>
-        <form>
+        <form className="flex flex-col" onSubmit={handleSubmit}>
           <input type="name" value={formState.name} onChange={handleInputName} />
           <input type="name" value={formState.email} onChange={handleInputEmail} />
           <textarea value={formState.message} onChange={handleInputMessage} />

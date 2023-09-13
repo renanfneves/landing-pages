@@ -40,7 +40,7 @@ export function Footer() {
       </section>
       <section className="py-16 flex flex-col-reverse self-center gap-8 items-center justify-center w-full sm:flex-row">
         <span>&copy; 2023 Impec Clean. All rights reserved.</span>
-        <nav className="flex gap-4">
+        <nav className="flex gap-4 flex-col sm:flex-row">
           <Link href="/" className="underline text-center">Privacy Policy</Link>
           <Link href="/" className="underline text-center">Terms of Service</Link>
           <Link href="/" className="underline text-center">Cookies Settings</Link>
