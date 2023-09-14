@@ -1,4 +1,5 @@
-const { join } = require('path');
+/* eslint-disable @typescript-eslint/no-var-requires */
+const { join } = require('path')
 
 module.exports = {
   plugins: {
@@ -7,4 +8,4 @@ module.exports = {
     },
     autoprefixer: {},
   },
-};
+}

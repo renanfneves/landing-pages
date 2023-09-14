@@ -1,8 +1,13 @@
 'use client'
 
-import { GraphicArticle, Input, Label, Textarea } from "@landing-pages/ui-library"
+import {
+  GraphicArticle,
+  Input,
+  Label,
+  Textarea,
+} from '@landing-pages/ui-library'
 import BackgroundImage from '../assets/hero-image.webp'
-import { ChangeEvent, FormEvent, useReducer } from "react"
+import { ChangeEvent, FormEvent, useReducer } from 'react'
 
 type FormState = {
   name: string
@@ -11,9 +16,9 @@ type FormState = {
 }
 
 enum Actions {
-  UpdateName = "name",
-  UpdateEmail = "email",
-  UpdateMessage = "message"
+  UpdateName = 'name',
+  UpdateEmail = 'email',
+  UpdateMessage = 'message',
 }
 
 const formInitialState = {
@@ -25,25 +30,25 @@ const formInitialState = {
 export function EmailForm() {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   function formReducer(state: FormState, action: any) {
-    const { type, payload } = action;
+    const { type, payload } = action
     switch (type) {
       case Actions.UpdateName:
         return {
           ...state,
-          [Actions.UpdateName]: payload.name
-        };
+          [Actions.UpdateName]: payload.name,
+        }
       case Actions.UpdateEmail:
         return {
           ...state,
-          [Actions.UpdateEmail]: payload.email
-        };
+          [Actions.UpdateEmail]: payload.email,
+        }
       case Actions.UpdateMessage:
         return {
           ...state,
-          [Actions.UpdateMessage]: payload.message
-        };
+          [Actions.UpdateMessage]: payload.message,
+        }
       default:
-        return state;
+        return state
     }
   }
 
@@ -73,17 +78,35 @@ export function EmailForm() {
         <form className="flex flex-col gap-8 mt-8" onSubmit={handleSubmit}>
           <div className="grid w-full items-center gap-1.5">
             <Label htmlFor="name">Nome</Label>
-            <Input name="name" id="name" value={formState.name} onChange={handleInputName} className="border border-black" />
+            <Input
+              name="name"
+              id="name"
+              value={formState.name}
+              onChange={handleInputName}
+              className="border border-black"
+            />
           </div>
 
           <div className="grid w-full items-center gap-1.5">
             <Label htmlFor="email">Email</Label>
-            <Input name="email" id="email" value={formState.email} onChange={handleInputEmail} className="border border-black" />
+            <Input
+              name="email"
+              id="email"
+              value={formState.email}
+              onChange={handleInputEmail}
+              className="border border-black"
+            />
           </div>
 
           <div className="grid w-full items-center gap-1.5">
             <Label htmlFor="message">Mensagem</Label>
-            <Textarea name="message" id="message" value={formState.message} onChange={handleInputMessage} className="border border-black" />
+            <Textarea
+              name="message"
+              id="message"
+              value={formState.message}
+              onChange={handleInputMessage}
+              className="border border-black"
+            />
           </div>
         </form>
       </GraphicArticle.ContentRoot>

@@ -5,21 +5,59 @@ import { TestimonialCard } from './TestimonialCard'
 export function Testimonials() {
   return (
     <section className="flex relative w-carousel sm:w-carousel-md overflow-x-scroll gap-16 snap-mandatory hidden-scrollbar">
-      <div className='flex gap-16'>
-        <TestimonialCard starsGiven={5} comment='eu acho que sim, mas penso que não' author='Renan Neves' city='Charneca da Caparica' />
-        <TestimonialCard starsGiven={5} comment='eu acho que sim, mas penso que não' author='Renan Neves' city='Charneca da Caparica' />
-        <TestimonialCard starsGiven={5} comment='eu acho que sim, mas penso que não' author='Renan Neves' city='Charneca da Caparica' />
-        <TestimonialCard starsGiven={5} comment='eu acho que sim, mas penso que não' author='Renan Neves' city='Charneca da Caparica' />
-        <TestimonialCard starsGiven={5} comment='eu acho que sim, mas penso que não' author='Renan Neves' city='Charneca da Caparica' />
-        <TestimonialCard starsGiven={5} comment='eu acho que sim, mas penso que não' author='Renan Neves' city='Charneca da Caparica' />
-        <TestimonialCard starsGiven={5} comment='eu acho que sim, mas penso que não' author='Renan Neves' city='Charneca da Caparica' />
-        <TestimonialCard starsGiven={5} comment='eu acho que sim, mas penso que não' author='Renan Neves' city='Charneca da Caparica' />
+      <div className="flex gap-16">
+        <TestimonialCard
+          starsGiven={5}
+          comment="eu acho que sim, mas penso que não"
+          author="Renan Neves"
+          city="Charneca da Caparica"
+        />
+        <TestimonialCard
+          starsGiven={5}
+          comment="eu acho que sim, mas penso que não"
+          author="Renan Neves"
+          city="Charneca da Caparica"
+        />
+        <TestimonialCard
+          starsGiven={5}
+          comment="eu acho que sim, mas penso que não"
+          author="Renan Neves"
+          city="Charneca da Caparica"
+        />
+        <TestimonialCard
+          starsGiven={5}
+          comment="eu acho que sim, mas penso que não"
+          author="Renan Neves"
+          city="Charneca da Caparica"
+        />
+        <TestimonialCard
+          starsGiven={5}
+          comment="eu acho que sim, mas penso que não"
+          author="Renan Neves"
+          city="Charneca da Caparica"
+        />
+        <TestimonialCard
+          starsGiven={5}
+          comment="eu acho que sim, mas penso que não"
+          author="Renan Neves"
+          city="Charneca da Caparica"
+        />
+        <TestimonialCard
+          starsGiven={5}
+          comment="eu acho que sim, mas penso que não"
+          author="Renan Neves"
+          city="Charneca da Caparica"
+        />
+        <TestimonialCard
+          starsGiven={5}
+          comment="eu acho que sim, mas penso que não"
+          author="Renan Neves"
+          city="Charneca da Caparica"
+        />
       </div>
     </section>
-
   )
 }
-
 
 // .carousel {
 //   display: flex;

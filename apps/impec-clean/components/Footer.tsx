@@ -1,5 +1,5 @@
-import Image from "next/image"
-import Link from "next/link"
+import Image from 'next/image'
+import Link from 'next/link'
 import Facebook from '../assets/facebook.svg'
 import Instagram from '../assets/instagram.svg'
 import LinkedIn from '../assets/linkedIn.svg'
@@ -9,7 +9,12 @@ export function Footer() {
   return (
     <footer className="flex flex-col divide-y divide-black w-full">
       <section className="flex items-center flex-col justify-between py-16 sm:pt-0 sm:flex-row gap-y-8">
-        <Image src={Facebook} alt="Impec Clean logo" sizes="40" height={40}></Image>
+        <Image
+          src={Facebook}
+          alt="Impec Clean logo"
+          sizes="40"
+          height={40}
+        ></Image>
         <nav className="flex-center gap-4">
           <Link href="/">Link 1</Link>
           <Link href="/">Link 2</Link>
@@ -17,23 +22,59 @@ export function Footer() {
         </nav>
         <ul className="flex gap-1">
           <li>
-            <a href="https://www.facebook.com/impeccleanbraga" target="_blank">
-              <Image src={Facebook} alt="Impec Clean logo" width={40} height={40}></Image>
+            <a
+              href="https://www.facebook.com/impeccleanbraga"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Image
+                src={Facebook}
+                alt="Impec Clean logo"
+                width={40}
+                height={40}
+              ></Image>
             </a>
           </li>
           <li>
-            <a href="https://www.instagram.com/impec.clean/" target="_blank">
-              <Image src={Instagram} alt="Impec Clean logo" width={40} height={40}></Image>
+            <a
+              href="https://www.instagram.com/impec.clean/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Image
+                src={Instagram}
+                alt="Impec Clean logo"
+                width={40}
+                height={40}
+              ></Image>
             </a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/in/impec-clean-603baa281/" target="_blank">
-              <Image src={LinkedIn} alt="Impec Clean logo" width={40} height={40}></Image>
+            <a
+              href="https://www.linkedin.com/in/impec-clean-603baa281/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Image
+                src={LinkedIn}
+                alt="Impec Clean logo"
+                width={40}
+                height={40}
+              ></Image>
             </a>
           </li>
           <li>
-            <a href="https://www.youtube.com/channel/UCCKGeHMlMm4ZyrfldVRylGA" target="_blank">
-              <Image src={Youtube} alt="Impec Clean logo" width={40} height={40}></Image>
+            <a
+              href="https://www.youtube.com/channel/UCCKGeHMlMm4ZyrfldVRylGA"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Image
+                src={Youtube}
+                alt="Impec Clean logo"
+                width={40}
+                height={40}
+              ></Image>
             </a>
           </li>
         </ul>
@@ -41,9 +82,15 @@ export function Footer() {
       <section className="py-16 flex flex-col-reverse self-center gap-8 items-center justify-center w-full sm:flex-row">
         <span>&copy; 2023 Impec Clean. All rights reserved.</span>
         <nav className="flex gap-4 flex-col sm:flex-row">
-          <Link href="/" className="underline text-center">Privacy Policy</Link>
-          <Link href="/" className="underline text-center">Terms of Service</Link>
-          <Link href="/" className="underline text-center">Cookies Settings</Link>
+          <Link href="/" className="underline text-center">
+            Privacy Policy
+          </Link>
+          <Link href="/" className="underline text-center">
+            Terms of Service
+          </Link>
+          <Link href="/" className="underline text-center">
+            Cookies Settings
+          </Link>
         </nav>
       </section>
     </footer>
