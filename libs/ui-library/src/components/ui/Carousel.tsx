@@ -1,20 +1,21 @@
 'use client'
 
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, ReactNode, Children } from 'react'
 
 interface CarouselProps {
   autoSlide?: boolean
   autoSlideInterval?: number
-  slides: string[]
+  children: ReactNode
 }
 
 export function Carousel({
   autoSlide = false,
   autoSlideInterval = 3000,
-  slides,
+  children,
 }: CarouselProps) {
   const [curr, setCurr] = useState(0)
+  const slides = Children.toArray(children)
 
   const prev = () =>
     setCurr((curr) => (curr === 0 ? slides.length - 1 : curr - 1))
@@ -36,25 +37,18 @@ export function Carousel({
         className="flex transition-transform ease-out duration-500"
         style={{ transform: `translateX(-${curr * 100}%)` }}
       >
-        {slides.map((img, i) => (
-          <img
-            src={img}
-            alt=""
-            key={i}
-            className="object-contain aspect-video rounded-md"
-          />
-        ))}
+        {children}
       </div>
       <div className="absolute inset-0 flex items-center justify-between p-4">
         <button
           onClick={prev}
-          className="p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white"
+          className="p-1 rounded-full shadow bg-zinc-100 text-gray-800 hover:bg-zinc-200"
         >
           <ChevronLeft size={20} />
         </button>
         <button
           onClick={next}
-          className="p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white"
+          className="p-1 rounded-full shadow bg-zinc-100 text-gray-800 hover:bg-zinc-200"
         >
           <ChevronRight size={20} />
         </button>

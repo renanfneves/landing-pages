@@ -6,7 +6,6 @@ import {
   Label,
   Textarea,
 } from '@landing-pages/ui-library'
-import BackgroundImage from '../assets/hero-image.webp'
 import { ChangeEvent, FormEvent, useReducer } from 'react'
 
 type FormState = {
@@ -111,10 +110,14 @@ export function EmailForm() {
             </div>
           </form>
         </GraphicArticle.ContentRoot>
-        <GraphicArticle.Image
-          src={BackgroundImage.src}
-          description="Serviços oferecidos pela Impec Clean"
-        />
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2985.334010006714!2d-8.410869584282961!3d41.56201519311364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd24ffe6fd03329f%3A0x259c35b977af95e5!2sImpec%20Clean!5e0!3m2!1spt-PT!2scv!4v1677152754839!5m2!1spt-PT!2scv"
+          style={{ border: 0, width: '100%' }}
+          className="h-96 md:h-[80vh]"
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          id="1734189114"
+        ></iframe>
       </GraphicArticle.Root>
     </div>
   )

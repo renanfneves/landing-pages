@@ -20,7 +20,17 @@ export function Portfolio() {
     >
       <h2>Portifólio</h2>
       <p>Descubra a Nossa Experiência em Transformar Espaços.</p>
-      <Carousel slides={CARDS} />
+      <Carousel>
+        {CARDS.map((img, i) => (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={img}
+            alt=""
+            key={i}
+            className="object-contain md:aspect-video rounded-md"
+          />
+        ))}
+      </Carousel>
     </section>
   )
 }
