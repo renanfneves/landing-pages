@@ -71,49 +71,51 @@ export function EmailForm() {
   }
 
   return (
-    <GraphicArticle.Root>
-      <GraphicArticle.ContentRoot>
-        <h2>Contacte-nos</h2>
-        <p>Não encontra o que procura? Deixe-nos o seu e-mail abaixo.</p>
-        <form className="flex flex-col gap-8 mt-8" onSubmit={handleSubmit}>
-          <div className="grid w-full items-center gap-1.5">
-            <Label htmlFor="name">Nome</Label>
-            <Input
-              name="name"
-              id="name"
-              value={formState.name}
-              onChange={handleInputName}
-              className="border border-black"
-            />
-          </div>
+    <div id="contact-form">
+      <GraphicArticle.Root>
+        <GraphicArticle.ContentRoot>
+          <h2>Contacte-nos</h2>
+          <p>Não encontra o que procura? Deixe-nos o seu e-mail abaixo.</p>
+          <form className="flex flex-col gap-8 mt-8" onSubmit={handleSubmit}>
+            <div className="grid w-full items-center gap-1.5">
+              <Label htmlFor="name">Nome</Label>
+              <Input
+                name="name"
+                id="name"
+                value={formState.name}
+                onChange={handleInputName}
+                className="border border-black"
+              />
+            </div>
 
-          <div className="grid w-full items-center gap-1.5">
-            <Label htmlFor="email">Email</Label>
-            <Input
-              name="email"
-              id="email"
-              value={formState.email}
-              onChange={handleInputEmail}
-              className="border border-black"
-            />
-          </div>
+            <div className="grid w-full items-center gap-1.5">
+              <Label htmlFor="email">Email</Label>
+              <Input
+                name="email"
+                id="email"
+                value={formState.email}
+                onChange={handleInputEmail}
+                className="border border-black"
+              />
+            </div>
 
-          <div className="grid w-full items-center gap-1.5">
-            <Label htmlFor="message">Mensagem</Label>
-            <Textarea
-              name="message"
-              id="message"
-              value={formState.message}
-              onChange={handleInputMessage}
-              className="border border-black"
-            />
-          </div>
-        </form>
-      </GraphicArticle.ContentRoot>
-      <GraphicArticle.Image
-        src={BackgroundImage.src}
-        description="Serviços oferecidos pela Impec Clean"
-      />
-    </GraphicArticle.Root>
+            <div className="grid w-full items-center gap-1.5">
+              <Label htmlFor="message">Mensagem</Label>
+              <Textarea
+                name="message"
+                id="message"
+                value={formState.message}
+                onChange={handleInputMessage}
+                className="border border-black"
+              />
+            </div>
+          </form>
+        </GraphicArticle.ContentRoot>
+        <GraphicArticle.Image
+          src={BackgroundImage.src}
+          description="Serviços oferecidos pela Impec Clean"
+        />
+      </GraphicArticle.Root>
+    </div>
   )
 }

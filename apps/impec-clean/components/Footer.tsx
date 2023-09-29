@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import Logo from '../assets/logo-complete.svg'
 import Facebook from '../assets/facebook.svg'
 import Instagram from '../assets/instagram.svg'
 import LinkedIn from '../assets/linkedIn.svg'
@@ -9,16 +10,21 @@ export function Footer() {
   return (
     <footer className="flex flex-col divide-y divide-black w-full">
       <section className="flex items-center flex-col justify-between py-16 sm:pt-0 sm:flex-row gap-y-8">
-        <Image
-          src={Facebook}
-          alt="Impec Clean logo"
-          sizes="40"
-          height={40}
-        ></Image>
+        <Link href="/">
+          <Image src={Logo} alt="Logo Impec Clean" width={200} height={25} />
+        </Link>
         <nav className="flex-center gap-4">
-          <Link href="/">Link 1</Link>
-          <Link href="/">Link 2</Link>
-          <Link href="/">Link 3</Link>
+          <ul className="flex gap-16">
+            <li>
+              <a href="#testemunhos">Testemunhos</a>
+            </li>
+            <li>
+              <a href="#servicos">Serviços</a>
+            </li>
+            <li>
+              <a href="#portifolio">Portifólio</a>
+            </li>
+          </ul>
         </nav>
         <ul className="flex gap-1">
           <li>

@@ -1,5 +1,5 @@
 import { Button, GraphicArticle } from '@landing-pages/ui-library'
-import BackgroundImage from '../assets/hero-image.webp'
+import BackgroundImage from '../assets/contactus-image.png'
 
 export function ContactUs() {
   return (

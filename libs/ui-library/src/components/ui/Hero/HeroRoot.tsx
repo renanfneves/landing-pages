@@ -1,4 +1,4 @@
-import { ReactNode } from "react"
+import { ReactNode } from 'react'
 
 interface HeroRootProps {
   children: ReactNode
@@ -7,11 +7,13 @@ interface HeroRootProps {
 
 export function HeroRoot({ children, backgroundImage }: HeroRootProps) {
   return (
-    <div className="w-full flex flex-col items-center gap-8 p-8 bg-cover justify-center h-screen aspect-video" style={{ backgroundImage: `url(${backgroundImage})`}}>
+    <div
+      className="w-full flex flex-col items-center gap-8 p-8 bg-cover justify-center md:h-screen aspect-video"
+      style={{ backgroundImage: `url(${backgroundImage})` }}
+    >
       {children}
     </div>
   )
 }
 
-HeroRoot.displayName = "Hero"
-
+HeroRoot.displayName = 'Hero'
