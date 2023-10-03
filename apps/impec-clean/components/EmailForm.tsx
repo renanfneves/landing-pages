@@ -57,6 +57,7 @@ export function EmailForm() {
                 id="message"
                 className="border border-black h-40"
                 ref={messageRef}
+                placeholder="Escreva aqui a sua mensagem..."
               />
             </div>
 
