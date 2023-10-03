@@ -1,71 +1,25 @@
 'use client'
 
 import {
+  Button,
   GraphicArticle,
   Input,
   Label,
   Textarea,
 } from '@landing-pages/ui-library'
-import { ChangeEvent, FormEvent, useReducer } from 'react'
-
-type FormState = {
-  name: string
-  email: string
-  message: string
-}
-
-enum Actions {
-  UpdateName = 'name',
-  UpdateEmail = 'email',
-  UpdateMessage = 'message',
-}
-
-const formInitialState = {
-  name: '',
-  email: '',
-  message: '',
-}
+import { FormEvent, useRef } from 'react'
 
 export function EmailForm() {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  function formReducer(state: FormState, action: any) {
-    const { type, payload } = action
-    switch (type) {
-      case Actions.UpdateName:
-        return {
-          ...state,
-          [Actions.UpdateName]: payload.name,
-        }
-      case Actions.UpdateEmail:
-        return {
-          ...state,
-          [Actions.UpdateEmail]: payload.email,
-        }
-      case Actions.UpdateMessage:
-        return {
-          ...state,
-          [Actions.UpdateMessage]: payload.message,
-        }
-      default:
-        return state
-    }
-  }
-
-  const [formState, dispatch] = useReducer(formReducer, formInitialState)
-
-  const handleInputName = (payload: ChangeEvent<HTMLInputElement>) => {
-    dispatch({ type: Actions.UpdateName, payload })
-  }
-
-  const handleInputEmail = (payload: ChangeEvent<HTMLInputElement>) => {
-    dispatch({ type: Actions.UpdateEmail, payload })
-  }
-
-  const handleInputMessage = (payload: ChangeEvent<HTMLTextAreaElement>) => {
-    dispatch({ type: Actions.UpdateMessage, payload })
-  }
+  const nameRef = useRef<HTMLInputElement>(null)
+  const emailRef = useRef<HTMLInputElement>(null)
+  const messageRef = useRef<HTMLTextAreaElement>(null)
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    console.log({
+      name: nameRef.current?.value,
+      email: emailRef.current?.value,
+      message: messageRef.current?.value,
+    })
     e.preventDefault()
   }
 
@@ -75,15 +29,14 @@ export function EmailForm() {
         <GraphicArticle.ContentRoot>
           <h2>Contacte-nos</h2>
           <p>Não encontra o que procura? Deixe-nos o seu e-mail abaixo.</p>
-          <form className="flex flex-col gap-8 mt-8" onSubmit={handleSubmit}>
+          <form className="flex flex-col gap-6 mt-4" onSubmit={handleSubmit}>
             <div className="grid w-full items-center gap-1.5">
               <Label htmlFor="name">Nome</Label>
               <Input
                 name="name"
                 id="name"
-                value={formState.name}
-                onChange={handleInputName}
                 className="border border-black"
+                ref={nameRef}
               />
             </div>
 
@@ -92,9 +45,8 @@ export function EmailForm() {
               <Input
                 name="email"
                 id="email"
-                value={formState.email}
-                onChange={handleInputEmail}
                 className="border border-black"
+                ref={emailRef}
               />
             </div>
 
@@ -103,11 +55,12 @@ export function EmailForm() {
               <Textarea
                 name="message"
                 id="message"
-                value={formState.message}
-                onChange={handleInputMessage}
-                className="border border-black"
+                className="border border-black h-40"
+                ref={messageRef}
               />
             </div>
+
+            <Button type="submit">Submeter</Button>
           </form>
         </GraphicArticle.ContentRoot>
         <iframe

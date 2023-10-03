@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import Logo from '../assets/logo-complete.svg'
+import Logo from '../assets/logo-complete.png'
 import Facebook from '../assets/facebook.svg'
 import Instagram from '../assets/instagram.svg'
 import LinkedIn from '../assets/linkedIn.svg'
@@ -89,13 +89,13 @@ export function Footer() {
         <span>&copy; 2023 Impec Clean. All rights reserved.</span>
         <nav className="flex gap-4 flex-col sm:flex-row">
           <Link href="/" className="underline text-center">
-            Privacy Policy
+            Política de Privacidade
           </Link>
           <Link href="/" className="underline text-center">
-            Terms of Service
+            Termos de Uso
           </Link>
           <Link href="/" className="underline text-center">
-            Cookies Settings
+            Definições de Cookies
           </Link>
         </nav>
       </section>

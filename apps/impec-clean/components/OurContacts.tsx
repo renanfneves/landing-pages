@@ -7,7 +7,12 @@ export function OurContacts() {
   return (
     <article className="flex items-start justify-center flex-wrap w-full py-16 gap-8">
       <address className="flex items-center flex-col gap-4 w-100 md:h-44">
-        <a className="flex-center flex-col gap-4" href="mailto:john@doe.com">
+        <a
+          className="flex-center flex-col gap-4"
+          href="mailto:john@doe.com"
+          target="_blank"
+          rel="noreferrer"
+        >
           <Image src={Envelop} width={30} height={30} alt="Impec Clean email" />
           <span>Email</span>
         </a>

@@ -1,6 +1,6 @@
 'use client'
 
-import { TestimonialCard } from './TestimonialCard'
+import { TestimonialCard } from '@landing-pages/ui-library'
 
 export function Testimonials() {
   return (

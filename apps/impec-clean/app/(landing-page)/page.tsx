@@ -1,7 +1,7 @@
 import { ImpecHeader } from '../../components/ImpecHeader'
 import { ImpecHero } from '../../components/ImpecHero'
 import { AboutUs } from '../../components/AboutUs'
-import { Testimonials } from '../../components/Testimonials/Testimonials'
+import { Testimonials } from '../../components/Testimonials'
 import { Services } from '../../components/Services'
 import { ContactUs } from '../../components/ContactUs'
 import { Portfolio } from '../../components/Portfolio'
