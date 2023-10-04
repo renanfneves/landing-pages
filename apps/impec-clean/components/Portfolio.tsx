@@ -16,19 +16,14 @@ export function Portfolio() {
   return (
     <section
       id="portifolio"
-      className="w-full h-screen gap-8 flex flex-col items-center justify-center"
+      className="w-full md:w-1/2 md:self-center h-screen gap-8 flex flex-col items-center justify-center"
     >
       <h2>Portifólio</h2>
       <p>Descubra a Nossa Experiência em Transformar Espaços.</p>
       <Carousel>
         {CARDS.map((img, i) => (
           // eslint-disable-next-line @next/next/no-img-element
-          <img
-            src={img}
-            alt=""
-            key={i}
-            className="object-contain md:aspect-video rounded-md"
-          />
+          <img src={img} alt="" key={i} className="object-contain rounded-md" />
         ))}
       </Carousel>
     </section>
