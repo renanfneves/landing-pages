@@ -25,7 +25,7 @@ export function TestimonialCard({
   }, [starsGiven])
 
   return (
-    <div className="flex flex-col border border-zinc-400 p-4 h-60 w-96">
+    <div className="flex flex-col p-4 h-56 w-96">
       <div className="flex">{starsIcons}</div>
       <blockquote className="flex flex-col gap-2 mt-4 h-full justify-between">
         <span dangerouslySetInnerHTML={{ __html: comment }} />

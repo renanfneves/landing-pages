@@ -45,7 +45,7 @@ export function Testimonials() {
           />
           <TestimonialCard
             starsGiven={5}
-            comment="Super profissionais! <br /> O meu sofá ficou como novo."
+            comment="Super profissionais! O meu sofá ficou como novo."
             author="Vanessa Araujo"
           />
           <TestimonialCard
