@@ -22,7 +22,9 @@ export function ImpecHero() {
         <Hero.CallToAction asChild>
           <a
             className="flex-center flex-col gap-4 font-bold text-white"
-            href="#contact-form"
+            href="http://wa.me/+351932270602?text=Olá%20equipa%20Impec%20Clean,%20vim%20através%20do%20site.%0A%0AComo%20posso%20fazer%20um%20orçamento%20personalizado%20e%20gratuitamente?"
+            target="_blank"
+            rel="noreferrer"
           >
             Fale com um especialista
           </a>
