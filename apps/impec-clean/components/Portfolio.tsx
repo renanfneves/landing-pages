@@ -15,10 +15,10 @@ const CARDS = [
 export function Portfolio() {
   return (
     <section
-      id="portifolio"
+      id="portfolio"
       className="w-full md:w-1/2 md:self-center h-screen gap-8 flex flex-col items-center justify-center"
     >
-      <h2>Portifólio</h2>
+      <h2>Portfólio</h2>
       <p>Descubra a Nossa Experiência em Transformar Espaços.</p>
       <Carousel>
         {CARDS.map((img, i) => (

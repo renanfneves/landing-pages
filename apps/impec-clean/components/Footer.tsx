@@ -8,7 +8,7 @@ import Youtube from '../assets/youtube.svg'
 
 export function Footer() {
   return (
-    <footer className="flex flex-col divide-y divide-black w-full">
+    <footer className="flex flex-col divide-y divide-black w-full md:px-16 px-4 py-4">
       <section className="flex items-center flex-col justify-between py-16 sm:pt-0 sm:flex-row gap-y-8">
         <Link href="/">
           <Image src={Logo} alt="Logo Impec Clean" width={200} height={25} />
@@ -22,7 +22,7 @@ export function Footer() {
               <a href="#servicos">Serviços</a>
             </li>
             <li>
-              <a href="#portifolio">Portifólio</a>
+              <a href="#portfolio">Portfólio</a>
             </li>
           </ul>
         </nav>
@@ -88,10 +88,13 @@ export function Footer() {
       <section className="py-16 flex flex-col-reverse self-center gap-8 items-center justify-center w-full sm:flex-row">
         <span>&copy; 2023 Impec Clean. All rights reserved.</span>
         <nav className="flex gap-4 flex-col sm:flex-row">
-          <Link href="/" className="underline text-center">
+          <Link
+            href="/politica-de-privacidade"
+            className="underline text-center"
+          >
             Política de Privacidade
           </Link>
-          <Link href="/" className="underline text-center">
+          <Link href="/definicoes-de-cookies" className="underline text-center">
             Definições de Cookies
           </Link>
         </nav>

@@ -12,7 +12,7 @@ const SERVICES = [
   '* Higienização carpetes',
   '* Higienização de alcatifa',
   '* Higienização de tapetes',
-  '* Higienização de Estofos automotivos',
+  '* Hig. de Estofos automotivos',
   '* Higienização de artigos de bebé',
   '* Higienização de cortinados',
   '* Higienização de colchão',

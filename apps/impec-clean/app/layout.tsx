@@ -1,4 +1,6 @@
 import { Roboto_Flex as Roboto } from 'next/font/google'
+import { ImpecHeader } from '../components/ImpecHeader'
+import { Footer } from '../components/Footer'
 
 import './global.css'
 
@@ -20,7 +22,9 @@ export default function RootLayout({
         className={`relative ${roboto.className}`}
         suppressHydrationWarning={true}
       >
+        <ImpecHeader />
         {children}
+        <Footer />
       </body>
     </html>
   )
