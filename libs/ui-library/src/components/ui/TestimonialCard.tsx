@@ -5,14 +5,14 @@ interface TestimonialCardProps {
   starsGiven?: number
   comment: string
   author: string
-  city?: string
+  date?: string
 }
 
 export function TestimonialCard({
   starsGiven = 0,
   comment,
   author,
-  city = '',
+  date = '',
 }: TestimonialCardProps) {
   const starsIcons = useMemo(() => {
     const icons = []
@@ -33,7 +33,7 @@ export function TestimonialCard({
           </div>
           <span className="font-bold">{author}</span>
         </div>
-        <cite>{city}</cite>
+        <cite>{date}</cite>
       </header>
       <div className="flex">{starsIcons}</div>
       <blockquote className="flex flex-col gap-2 mt-4 h-full justify-between">

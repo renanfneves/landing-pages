@@ -10,7 +10,7 @@ export function Testimonials() {
     >
       <h2 className="self-start md:self-center">Testemunhos</h2>
       <p>Descubra a Nossa Experiência em Transformar Espaços.</p>
-      <div className="flex relative w-carousel sm:w-carousel-md overflow-x-scroll gap-16 snap-mandatory hidden-scrollbar">
+      <div className="flex relative w-carousel sm:w-carousel-md overflow-y-hidden overflow-x-scroll gap-16 snap-mandatory hidden-scrollbar">
         <div className="flex gap-16">
           <TestimonialCard
             starsGiven={5}
@@ -41,7 +41,6 @@ export function Testimonials() {
             starsGiven={5}
             comment="Adorei, o sofá ficou novo mesmo e com um cheirinho muito bom. Profissionais e muito simpáticos"
             author="Isabel Oliveira"
-            city="Charneca da Caparica"
           />
           <TestimonialCard
             starsGiven={5}
