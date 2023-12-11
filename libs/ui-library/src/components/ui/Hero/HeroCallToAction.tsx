@@ -9,9 +9,16 @@ export function HeroCallToAction({
   children,
   onClick,
   asChild,
+  className,
 }: HeroCallToActionProps) {
   return (
-    <Button variant="outline" onClick={onClick} asChild={asChild}>
+    <Button
+      variant="outline"
+      onClick={onClick}
+      asChild={asChild}
+      className={className}
+      size="lg"
+    >
       {children}
     </Button>
   )

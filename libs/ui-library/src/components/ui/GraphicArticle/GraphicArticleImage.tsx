@@ -16,7 +16,7 @@ export function GraphicArticleImage({
         src={src}
         alt={description}
         sizes="100vw 50vw"
-        className="object-cover"
+        className="object-scale-down"
       />
     </figure>
   )

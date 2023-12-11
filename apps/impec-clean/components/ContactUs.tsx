@@ -1,5 +1,5 @@
 import { Button, GraphicArticle } from '@landing-pages/ui-library'
-import BackgroundImage from '../assets/contactus-image.png'
+import BackgroundImage from '../assets/contactus-image.svg'
 
 export function ContactUs() {
   return (
@@ -11,7 +11,16 @@ export function ContactUs() {
           limpeza e higienização para estofos e carpetes, incluindo sofás,
           colchões e tapetes.
         </p>
-        <Button style={{ width: 'fit-content' }}>Pedir orçamento grátis</Button>
+        <Button style={{ width: 'fit-content' }} asChild>
+          <a
+            className="flex-center flex-col gap-4"
+            href="http://wa.me/+351932270602?text=Olá%20equipa%20Impec%20Clean,%0AComo%20posso%20fazer%20um%20orçamento%20personalizado%20e%20gratuito?"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Pedir orçamento grátis
+          </a>
+        </Button>
       </GraphicArticle.ContentRoot>
       <GraphicArticle.Image
         src={BackgroundImage.src}

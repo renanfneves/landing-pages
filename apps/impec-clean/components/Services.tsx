@@ -1,9 +1,9 @@
 'use client'
 
 import { GraphicArticle } from '@landing-pages/ui-library'
-import UpholsteryImage from '../assets/upholstery-service.png'
+import UpholsteryImage from '../assets/upholstery-service.svg'
 import MattressImage from '../assets/mattress-service.png'
-import CarpetsImage from '../assets/carpets-service.png'
+import CarpetsImage from '../assets/carpets-service.svg'
 import { useCallback, useState } from 'react'
 import { StaticImageData } from 'next/image'
 
@@ -39,7 +39,7 @@ export function Services() {
             onClick={handleActiveService('upholstery')}
           >
             <div
-              className="flex flex-col gap-4 pl-8 text-left border-l-2 border-transparent data-[active=upholstery]:border-l-black"
+              className="flex flex-col gap-4 pl-8 text-left border-l-4 data-[active=upholstery]:border-l-black"
               data-active={activeService}
             >
               <h2 className="text-3xl">Limpeza Profissional de Estofos</h2>
@@ -57,7 +57,7 @@ export function Services() {
             onClick={handleActiveService('mattress')}
           >
             <div
-              className="flex flex-col gap-4 pl-8 text-left border-l-2 border-transparent data-[active=mattress]:border-l-black"
+              className="flex flex-col gap-4 pl-8 text-left border-l-4 data-[active=mattress]:border-l-black"
               data-active={activeService}
             >
               <h2 className="text-3xl">Serviços de Limpeza de Colchões</h2>
@@ -76,7 +76,7 @@ export function Services() {
             onClick={handleActiveService('carpets')}
           >
             <div
-              className="flex flex-col gap-4 pl-8 text-left border-l-2 border-transparent data-[active=carpets]:border-l-black"
+              className="flex flex-col gap-4 pl-8 text-left border-l-4 data-[active=carpets]:border-l-black"
               data-active={activeService}
             >
               <h2 className="text-3xl">Soluções de Limpeza para Carpetes</h2>

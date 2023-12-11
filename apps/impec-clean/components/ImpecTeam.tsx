@@ -1,5 +1,5 @@
 import { GraphicArticle } from '@landing-pages/ui-library'
-import BackgroundImage from '../assets/team-image.png'
+import BackgroundImage from '../assets/team-image.svg'
 
 export function ImpecTeam() {
   return (

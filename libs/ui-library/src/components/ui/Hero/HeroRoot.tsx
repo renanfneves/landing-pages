@@ -8,7 +8,7 @@ interface HeroRootProps {
 export function HeroRoot({ children, backgroundImage }: HeroRootProps) {
   return (
     <div
-      className="w-full flex flex-col items-center gap-8 p-8 bg-cover justify-center md:h-screen aspect-video"
+      className="relative w-full flex flex-col items-center gap-8 p-8 bg-cover justify-center md:h-screen aspect-video"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       {children}

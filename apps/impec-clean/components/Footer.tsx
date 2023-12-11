@@ -13,8 +13,8 @@ export function Footer() {
         <Link href="/">
           <Image src={Logo} alt="Logo Impec Clean" width={200} height={25} />
         </Link>
-        <nav className="flex-center gap-4">
-          <ul className="flex gap-16">
+        <nav className="flex-center gap-4 w-full md:w-fit">
+          <ul className="flex justify-between md:gap-16 w-full">
             <li>
               <a href="#testemunhos">Testemunhos</a>
             </li>
@@ -90,9 +90,6 @@ export function Footer() {
         <nav className="flex gap-4 flex-col sm:flex-row">
           <Link href="/" className="underline text-center">
             Política de Privacidade
-          </Link>
-          <Link href="/" className="underline text-center">
-            Termos de Uso
           </Link>
           <Link href="/" className="underline text-center">
             Definições de Cookies
