@@ -30,7 +30,7 @@ export function ImpecHero() {
         </Hero.CallToAction>
       </div>
 
-      <div className="absolute left-4 right-4 bottom-4 overflow-hidden backdrop-blur-sm">
+      <div className="md:absolute md:left-4 md:right-4 md:bottom-4 overflow-hidden backdrop-blur-sm">
         <HeroOutdoor />
       </div>
     </Hero.Root>
