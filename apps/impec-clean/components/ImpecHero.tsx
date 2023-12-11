@@ -8,7 +8,7 @@ import { HeroOutdoor } from './HeroOutdoor'
 export function ImpecHero() {
   return (
     <Hero.Root backgroundImage={BackgroundImage.src}>
-      <div className="flex-center flex-col max-w-2xl gap-8 font-bold relative">
+      <div className="flex-center flex-col max-w-2xl gap-4 font-bold relative">
         <Hero.Title>
           Descubra a Excelência em Limpeza de Estofos e Carpetes
         </Hero.Title>
@@ -17,12 +17,9 @@ export function ImpecHero() {
           desinfeção e higienização de alta qualidade para estofos, colchões e
           carpetes.
         </Hero.Text>
-        <Hero.CallToAction
-          asChild
-          className="border-yellow-400 hover:border-none font-bold backdrop-blur-sm border-2 hover:bg-yellow-400"
-        >
+        <Hero.CallToAction asChild>
           <a
-            className="flex-center flex-col gap-4 font-bold text-yellow-400 hover:text-white"
+            className="flex-center flex-col gap-4 font-bold text-white"
             href="#contact-form"
           >
             Fale com um especialista

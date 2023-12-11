@@ -5,5 +5,9 @@ interface HeroTitleProps {
 }
 
 export function HeroTitle({ children }: HeroTitleProps) {
-  return <h1 className="text-white text-[3.4rem] text-center">{children}</h1>
+  return (
+    <h1 className="text-white text-[3.2rem] text-center backdrop-blur-sm">
+      {children}
+    </h1>
+  )
 }

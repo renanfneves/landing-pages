@@ -5,5 +5,9 @@ interface HeroTextProps {
 }
 
 export function HeroText({ children }: HeroTextProps) {
-  return <h2 className="text-white text-base text-center">{children}</h2>
+  return (
+    <h2 className="text-white text-base text-center backdrop-blur-sm">
+      {children}
+    </h2>
+  )
 }
