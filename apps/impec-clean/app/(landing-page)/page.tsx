@@ -7,6 +7,9 @@ import { Portfolio } from '../../components/Portfolio'
 import { ImpecTeam } from '../../components/ImpecTeam'
 import { EmailForm } from '../../components/EmailForm'
 import { OurContacts } from '../../components/OurContacts'
+import { WhyChooseUs } from '../../components/WhyChooseUs'
+import { ProtectYourSofa } from '../../components/ProtectYourSofa'
+import { Awards } from '../../components/Awards'
 
 export default async function LandingPage() {
   return (
@@ -15,8 +18,11 @@ export default async function LandingPage() {
       <div className="flex flex-col container gap-16 overflow-hidden">
         <Testimonials />
         <AboutUs />
+        <Awards />
+        <WhyChooseUs />
         <Services />
         <ContactUs />
+        <ProtectYourSofa />
         <ImpecTeam />
         <Portfolio />
         <EmailForm />

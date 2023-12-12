@@ -25,7 +25,7 @@ export function TestimonialCard({
   }, [starsGiven])
 
   return (
-    <div className="flex flex-col p-2 md:p-4 h-56 w-96">
+    <div className="flex flex-col p-4 h-56 w-96 border border-gray-300 rounded-sm">
       <header className="flex flex-col text-sm mb-4">
         <div className="flex items-center gap-4">
           <div className="border-2 border-black rounded-full p-2 w-fit">

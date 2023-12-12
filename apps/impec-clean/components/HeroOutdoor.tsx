@@ -40,12 +40,12 @@ export function HeroOutdoor() {
   return (
     <div
       ref={sliderRef}
-      className="keen-slider w-full inline-flex justify-between backdrop-blur-sm items-center"
+      className="keen-slider w-full inline-flex justify-between items-center"
     >
       {SERVICES.map((service, i) => (
         <li
           key={i}
-          className="keen-slider__slide text-white font-semibold items-center flex-row text-center list-none"
+          className="keen-slider__slide text-white font-semibold items-center flex-row text-center list-none backdrop-blur-sm"
           style={{ maxWidth: 300, minWidth: 250, minHeight: 'unset' }}
         >
           <h2 className="text-base">{service}</h2>

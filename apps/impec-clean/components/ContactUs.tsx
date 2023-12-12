@@ -9,7 +9,7 @@ export function ContactUs() {
         e higienização para estofos e carpetes, incluindo sofás, colchões e
         tapetes.
       </p>
-      <Button style={{ width: 'fit-content' }} asChild>
+      <Button asChild size="lg">
         <a
           className="flex-center flex-col gap-4"
           href="http://wa.me/+351932270602?text=Olá%20equipa%20Impec%20Clean,%0AComo%20posso%20fazer%20um%20orçamento%20personalizado%20e%20gratuito?"

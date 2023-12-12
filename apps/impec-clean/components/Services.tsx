@@ -1,7 +1,7 @@
 'use client'
 
 import { GraphicArticle } from '@landing-pages/ui-library'
-import UpholsteryImage from '../assets/upholstery-service.svg'
+import UpholsteryImage from '../assets/upholstery-service.png'
 import MattressImage from '../assets/mattress-service.png'
 import CarpetsImage from '../assets/carpets-service.svg'
 import { useCallback, useState } from 'react'
@@ -42,7 +42,7 @@ export function Services() {
               className="flex flex-col gap-4 pl-8 text-left border-l-4 data-[active=upholstery]:border-l-black"
               data-active={activeService}
             >
-              <h2 className="text-3xl">Limpeza Profissional de Estofos</h2>
+              <h2 className="text-3xl">Higienização de estofos</h2>
               <p className="text-sm">
                 Oferecemos serviços de limpeza de estofos de alta qualidade para
                 garantir que os seus móveis se mantenham frescos e limpos. A
@@ -60,13 +60,14 @@ export function Services() {
               className="flex flex-col gap-4 pl-8 text-left border-l-4 data-[active=mattress]:border-l-black"
               data-active={activeService}
             >
-              <h2 className="text-3xl">Serviços de Limpeza de Colchões</h2>
+              <h2 className="text-3xl">Higienização de colchões</h2>
               <p className="text-sm">
-                Os nossos serviços profissionais de limpeza de colchões
-                ajudam-no a manter um ambiente de sono limpo e saudável.
-                Utilizamos equipamento especializado e soluções de limpeza
-                seguras para remover ácaros, alergénios e manchas,
-                garantindo-lhe uma boa noite de sono.
+                Seu sono é inestimável, mas sabia que após apenas um ano de uso,
+                um colchão pode acumular até 1,5 milhões de ácaros? Esses
+                intrusos invisíveis podem ser prejudiciais à saúde respiratória,
+                interferindo na qualidade do seu descanso. Com a Higienização de
+                Colchões da Impec Clean, proporcionamos noites de sono
+                tranquilas e saudáveis para você e sua família.
               </p>
             </div>
           </button>
@@ -79,13 +80,15 @@ export function Services() {
               className="flex flex-col gap-4 pl-8 text-left border-l-4 data-[active=carpets]:border-l-black"
               data-active={activeService}
             >
-              <h2 className="text-3xl">Soluções de Limpeza para Carpetes</h2>
+              <h2 className="text-3xl">Higienização de carpetes</h2>
               <p className="text-sm">
-                As nossas soluções de limpeza para carpetes foram concebidas
-                para limpar profundamente e revitalizar os seus tapetes.
-                Utilizamos equipamento poderoso e métodos eficazes de limpeza
-                para remover sujidade, bactérias e odores, deixando os seus
-                carpetes com um aspeto e um aroma frescos.
+                Em meio ao aconchego das carpetes, a sujidade se acumula. A
+                IMPEC traz a solução ideal com um método seguro, atendendo
+                diretamente ao seu lar. Nossas técnicas inovadoras garantem que
+                suas carpetes sequem em poucas horas, proporcionando a você a
+                comodidade de usá-las no mesmo dia. Experimente a fusão perfeita
+                entre praticidade e o encanto de carpetes verdadeiramente
+                impecáveis.
               </p>
             </div>
           </button>

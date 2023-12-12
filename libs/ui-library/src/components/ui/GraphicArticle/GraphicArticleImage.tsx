@@ -10,7 +10,7 @@ export function GraphicArticleImage({
   description,
 }: GraphicArticleImageProps) {
   return (
-    <figure className="relative w-full h-80 md:w-1/2 lg:h-[calc(100vh-4rem)]">
+    <figure className="relative w-full h-80 md:w-1/2 lg:min-h-[calc(100vh-4rem)]">
       <Image
         fill
         src={src}

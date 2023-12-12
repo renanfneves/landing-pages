@@ -17,8 +17,8 @@ export function OurContacts() {
           <span>Email</span>
         </a>
         <p className="text-center">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          varius enim in ero.
+          Envie-nos um email para tirar a suas dúvidas e solicitar um orçamento
+          gratuitamente
         </p>
         <address className="mt-auto underline text-sm">
           geral@rimpecclean.pt
@@ -32,11 +32,11 @@ export function OurContacts() {
           rel="noreferrer"
         >
           <Image src={Phone} width={30} height={30} alt="Impec Clean phone" />
-          <span>Whatsapp</span>
+          <span>WhatsApp</span>
         </a>
         <p className="text-center">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          varius enim in ero.
+          Mande-nos mensagem nos WhatsApp para agendar um serviço de Limpeza e
+          Higienização à sua escolha
         </p>
         <address className="mt-auto underline text-sm">
           +(351) 932-270-602
