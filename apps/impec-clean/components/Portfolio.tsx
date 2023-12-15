@@ -1,5 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
-import { Carousel } from '@landing-pages/ui-library'
 
 import PortfolioII from '../assets/portfolio-2.png'
 import PortfolioIII from '../assets/portfolio-3.png'

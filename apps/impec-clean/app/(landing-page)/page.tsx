@@ -15,14 +15,14 @@ export default async function LandingPage() {
   return (
     <main className="overflow-hidden">
       <ImpecHero />
-      <div className="flex flex-col container gap-16 overflow-hidden">
+      <div className="mt-8 flex flex-col container gap-32 overflow-hidden">
         <Testimonials />
         <AboutUs />
         <Awards />
         <WhyChooseUs />
         <Services />
-        <ContactUs />
         <ProtectYourSofa />
+        <ContactUs />
         <ImpecTeam />
         <Portfolio />
         <EmailForm />

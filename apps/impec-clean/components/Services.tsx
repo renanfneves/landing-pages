@@ -28,7 +28,7 @@ export function Services() {
 
   return (
     <div id="servicos">
-      <GraphicArticle.Root className="flex-col-reverse">
+      <GraphicArticle.Root className="flex-col">
         <GraphicArticle.Image
           src={ImagesMapper[activeService].src}
           description="Serviços oferecidos pela Impec Clean"

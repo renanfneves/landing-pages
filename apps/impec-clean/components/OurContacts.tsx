@@ -5,11 +5,11 @@ import MapPin from '../assets/map-pin.svg'
 
 export function OurContacts() {
   return (
-    <article className="flex items-start justify-center flex-wrap w-full py-16 gap-8">
+    <article className="flex items-start justify-center flex-wrap w-full md:py-16 gap-8">
       <address className="flex items-center flex-col gap-4 w-100 md:h-44">
         <a
           className="flex-center flex-col gap-4"
-          href="mailto:john@doe.com"
+          href="mailto:impec.clean1@gmail.com"
           target="_blank"
           rel="noreferrer"
         >
@@ -21,7 +21,7 @@ export function OurContacts() {
           gratuitamente
         </p>
         <address className="mt-auto underline text-sm">
-          geral@rimpecclean.pt
+          impec.clean1@gmail.com
         </address>
       </address>
       <address className="flex items-center flex-col gap-4 w-100 md:h-44">
