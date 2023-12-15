@@ -10,13 +10,13 @@ export function GraphicArticleImage({
   description,
 }: GraphicArticleImageProps) {
   return (
-    <figure className="relative w-full h-80 md:w-1/2 lg:min-h-[calc(100vh-4rem)]">
+    <figure className="relative w-full h-80 md:w-1/2 md:h-[500px]">
       <Image
         fill
         src={src}
         alt={description}
         sizes="100vw 50vw"
-        className="object-scale-down"
+        className="object-scale-down rounded-md aspect-video"
       />
     </figure>
   )

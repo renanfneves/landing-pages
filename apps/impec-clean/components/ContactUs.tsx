@@ -2,10 +2,10 @@ import { Button } from '@landing-pages/ui-library'
 
 export function ContactUs() {
   return (
-    <article className="max-w-xl m-auto flex flex-col gap-8 items-center">
+    <article className="max-w-xl m-auto md:min-h-[40vh] flex flex-col gap-8 items-center justify-center">
       <h2>Fale connosco!</h2>
       <p>
-        A ImpecClean vai a sua casa! Oferecemos os melhores serviços de limpeza
+        A Impec Clean vai a sua casa! Oferecemos os melhores serviços de limpeza
         e higienização para estofos e carpetes, incluindo sofás, colchões e
         tapetes.
       </p>

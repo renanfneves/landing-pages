@@ -28,7 +28,7 @@ export function ProtectYourSofa() {
         </section>
       </GraphicArticle.ContentRoot>
       <GraphicArticle.MediaRoot>
-        <VideoPlayer videoId="47ClD-seLns" />
+        <VideoPlayer videoId="3d2hNC_tqN8" />
       </GraphicArticle.MediaRoot>
     </GraphicArticle.Root>
   )

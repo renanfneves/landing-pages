@@ -12,7 +12,7 @@ export function GraphicArticleRoot({
   return (
     <article
       className={twMerge(
-        'flex flex-col items-center md:flex-row w-full lg:min-h-screen gap-8 py-4 md:py-8',
+        'flex flex-col items-center md:flex-row w-full md:min-h-[70vh] gap-8',
         className,
       )}
     >

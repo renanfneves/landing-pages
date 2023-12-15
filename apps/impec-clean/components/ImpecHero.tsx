@@ -14,7 +14,7 @@ export function ImpecHero() {
         </Hero.Title>
         <div className="max-w-2xl m-auto">
           <Hero.Text>
-            A ImpecClean é especializada em oferecer serviços de limpeza,
+            A Impec Clean é especializada em oferecer serviços de limpeza,
             desinfeção e higienização de alta qualidade para estofos, colchões e
             carpetes.
           </Hero.Text>

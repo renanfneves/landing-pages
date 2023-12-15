@@ -1,8 +1,8 @@
 'use client'
 
 import { GraphicArticle } from '@landing-pages/ui-library'
-import UpholsteryImage from '../assets/upholstery-service.png'
-import MattressImage from '../assets/mattress-service.png'
+import UpholsteryImage from '../assets/upholstery-service.svg'
+import MattressImage from '../assets/mattress-service.svg'
 import CarpetsImage from '../assets/carpets-service.svg'
 import { useCallback, useState } from 'react'
 import { StaticImageData } from 'next/image'

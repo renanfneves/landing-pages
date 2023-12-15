@@ -1,5 +1,7 @@
 import { Star, User } from 'lucide-react'
+import Image from 'next/image'
 import { useMemo } from 'react'
+import SVGGoogle from '../../assets/google.svg'
 
 interface TestimonialCardProps {
   starsGiven?: number
@@ -25,15 +27,18 @@ export function TestimonialCard({
   }, [starsGiven])
 
   return (
-    <div className="flex flex-col p-4 h-56 w-96 border border-gray-300 rounded-sm">
-      <header className="flex flex-col text-sm mb-4">
+    <div className="flex flex-col p-4 h-60 w-96 border border-gray-300 rounded-sm">
+      <header className="flex flex-row text-sm mb-4 justify-between">
         <div className="flex items-center gap-4">
           <div className="border-2 border-black rounded-full p-2 w-fit">
             <User size={20} className="text-black font-bold" />
           </div>
-          <span className="font-bold">{author}</span>
+          <div className="flex flex-col justify-start">
+            <span className="font-bold">{author}</span>
+            <cite>{date}</cite>
+          </div>
         </div>
-        <cite>{date}</cite>
+        <Image src={SVGGoogle} alt={''} width={30} height={30} />
       </header>
       <div className="flex">{starsIcons}</div>
       <blockquote className="flex flex-col gap-2 mt-4 h-full justify-between">

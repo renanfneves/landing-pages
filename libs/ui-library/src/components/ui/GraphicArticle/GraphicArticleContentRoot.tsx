@@ -8,7 +8,7 @@ export function GraphicArticleContentRoot({
   children,
 }: GraphicArticleContentRootProps) {
   return (
-    <section className="flex flex-col w-full md:w-1/2 h-full md:px-8 gap-4">
+    <section className="flex flex-col w-full md:w-1/2 h-full md:px-8 gap-4 text-justify">
       {children}
     </section>
   )

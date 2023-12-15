@@ -13,7 +13,7 @@ import { Awards } from '../../components/Awards'
 
 export default async function LandingPage() {
   return (
-    <main>
+    <main className="overflow-hidden">
       <ImpecHero />
       <div className="flex flex-col container gap-16 overflow-hidden">
         <Testimonials />

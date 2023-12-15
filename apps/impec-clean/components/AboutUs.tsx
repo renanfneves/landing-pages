@@ -1,5 +1,5 @@
 import { GraphicArticle } from '@landing-pages/ui-library'
-import BackgroundImage from '../assets/aboutus-img.png'
+import BackgroundImage from '../assets/aboutus.svg'
 import Image from 'next/image'
 import SVGCube from '../assets/3d-cube.svg'
 
@@ -10,7 +10,7 @@ export function AboutUs() {
         <h3 className="text-sm font-bold">Excelência</h3>
         <h2>Serviços de Limpeza Profissional para Estofos e Carpetes</h2>
         <p>
-          A ImpecClean oferece serviços de limpeza, higienização e desinfecção
+          A Impec Clean oferece serviços de limpeza, higienização e desinfecção
           de estofos e carpetes com qualidade, eficiência e atendimento
           personalizado. A nossa equipa altamente treinada utiliza técnicas
           avançadas e produtos de alta qualidade para garantir que seus estofos
