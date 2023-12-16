@@ -9,7 +9,7 @@ export function OurContacts() {
       <address className="flex items-center flex-col gap-4 w-100 md:h-44">
         <a
           className="flex-center flex-col gap-4"
-          href="mailto:impec.clean1@gmail.com"
+          href="mailto:impec.clean@outlook.com"
           target="_blank"
           rel="noreferrer"
         >
@@ -21,7 +21,7 @@ export function OurContacts() {
           gratuitamente
         </p>
         <address className="mt-auto underline text-sm">
-          impec.clean1@gmail.com
+          impec.clean@outlook.com
         </address>
       </address>
       <address className="flex items-center flex-col gap-4 w-100 md:h-44">
