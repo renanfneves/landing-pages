@@ -1,6 +1,6 @@
 'use client'
 
-import BackgroundImage from '../assets/hero-background.png'
+import BackgroundImage from '../assets/hero-background.svg'
 
 import { Hero } from '@landing-pages/ui-library'
 import { HeroOutdoor } from './HeroOutdoor'
