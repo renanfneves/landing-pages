@@ -1,7 +1,6 @@
 'use client'
 
-import BackgroundImage from '../assets/hero-background.svg'
-
+import BackgroundImage from '../assets/hero-background.webp'
 import { Hero } from '@landing-pages/ui-library'
 import { HeroOutdoor } from './HeroOutdoor'
 

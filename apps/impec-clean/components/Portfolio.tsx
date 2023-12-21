@@ -4,7 +4,7 @@
 import PortfolioII from '../assets/portfolio-2.png'
 import PortfolioIII from '../assets/portfolio-3.png'
 import PortfolioIV from '../assets/portfolio-4.png'
-import PortfolioV from '../assets/portfolio-5.svg'
+import PortfolioV from '../assets/portfolio-5.webp'
 import { useKeenSlider } from 'keen-slider/react'
 import { MutableRefObject, useCallback } from 'react'
 

@@ -1,5 +1,5 @@
 import { Button, GraphicArticle } from '@landing-pages/ui-library'
-import BackgroundImage from '../assets/aboutus.svg'
+import BackgroundImage from '../assets/aboutus.webp'
 import Image from 'next/image'
 import SVGCube from '../assets/3d-cube.svg'
 

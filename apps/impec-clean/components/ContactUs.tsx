@@ -1,5 +1,5 @@
 import { Button } from '@landing-pages/ui-library'
-import Banner from '../assets/banner-contactus.png'
+import Banner from '../assets/banner-contactus.webp'
 
 export function ContactUs() {
   return (
