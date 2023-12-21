@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`relative ${roboto.className} max-w-screen-2xl`}
+        className={`relative ${roboto.className}`}
         suppressHydrationWarning={true}
       >
         <ImpecHeader />
