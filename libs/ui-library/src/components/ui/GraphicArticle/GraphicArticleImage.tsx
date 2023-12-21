@@ -16,7 +16,7 @@ export function GraphicArticleImage({
         src={src}
         alt={description}
         sizes="100vw 50vw"
-        className="object-scale-down rounded-md aspect-video"
+        className="object-cover rounded-md aspect-video"
       />
     </figure>
   )

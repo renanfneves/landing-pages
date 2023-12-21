@@ -19,12 +19,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`relative ${roboto.className}`}
+        className={`relative ${roboto.className} overflow-x-hidden`}
         suppressHydrationWarning={true}
       >
-        <ImpecHeader />
-        {children}
-        <Footer />
+        <div className="max-w-[1440px] mx-auto">
+          <ImpecHeader />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   )

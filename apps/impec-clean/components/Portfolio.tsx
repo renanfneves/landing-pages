@@ -50,6 +50,7 @@ export function Portfolio() {
   }, [])
   const [sliderRef, instanceRef] = useKeenSlider({
     initial: 0,
+    loop: true,
   })
   const [thumbnailRef] = useKeenSlider(
     {
