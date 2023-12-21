@@ -7,7 +7,6 @@ import { Portfolio } from '../../components/Portfolio'
 import { ImpecTeam } from '../../components/ImpecTeam'
 import { EmailForm } from '../../components/EmailForm'
 import { OurContacts } from '../../components/OurContacts'
-import { WhyChooseUs } from '../../components/WhyChooseUs'
 import { ProtectYourSofa } from '../../components/ProtectYourSofa'
 import { Awards } from '../../components/Awards'
 
@@ -19,7 +18,6 @@ export default async function LandingPage() {
         <Testimonials />
         <AboutUs />
         <Awards />
-        <WhyChooseUs />
         <Services />
         <ProtectYourSofa />
         <ContactUs />
