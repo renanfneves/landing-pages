@@ -1,105 +1,180 @@
 'use client'
 
+import z from 'zod'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { useForm } from 'react-hook-form'
+
 import {
   Button,
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
   GraphicArticle,
   Input,
-  Label,
+  RadioGroup,
+  RadioGroupItem,
   Textarea,
 } from '@landing-pages/ui-library'
-import { FormEvent, useCallback, useRef } from 'react'
 
-const BASE_URL = 'http://wa.me/+351932270602'
+import { useRef } from 'react'
+
+const formSchema = z.object({
+  name: z.string().min(2, {
+    message: 'Seu nome deve conter ao menos duas letras',
+  }),
+  email: z.string(),
+  phone: z.string(),
+  message: z.string().min(1, {
+    message: 'Por favor, deixe-nos uma mensagem',
+  }),
+  sendType: z.enum(['wtsp', 'email']),
+})
+
+const WTSP_BASE_URL = 'http://wa.me/+351932270602?text='
+const EMAIL_BASE_URL =
+  'mailto:impec.clean@outlook.com?subject=Olá%20venho%20pelo%20site&body='
 
 export function EmailForm() {
-  const nameRef = useRef<HTMLInputElement>(null)
-  const emailRef = useRef<HTMLInputElement>(null)
-  const messageRef = useRef<HTMLTextAreaElement>(null)
   const linkRef = useRef<HTMLAnchorElement>(null)
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: '',
+      email: '',
+      phone: '',
+      message: '',
+      sendType: 'wtsp',
+    },
+  })
 
-  const handleSubmit = useCallback((e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
+  function onSubmit(values: z.infer<typeof formSchema>) {
+    const { name, email, phone, message, sendType } = values
 
-    const { name, email, message } = {
-      name: nameRef.current?.value ?? '',
-      email: emailRef.current?.value ?? '',
-      message: messageRef.current?.value ?? '',
-    }
+    const nameLine = `Me%20chamo%20${name.split(' ').join('%20')}%0A`
 
-    const nameLine = name
-      ? `Me%20chamo%20${name.split(' ').join('%20')}%0A`
-      : ''
+    const emailLine = email ? `${email}%0A` : ''
+    const phoneLine = phone ? `${phone}%0A` : ''
 
-    const emailLine = email ? `(${email})%0A%0A` : ''
+    const baseUrl = sendType === 'email' ? EMAIL_BASE_URL : WTSP_BASE_URL
 
-    const messageLine = message
-      ? `${message
-          .replace(/\r\n|\n|\r/g, '%0A')
-          .split(' ')
-          .join('%20')}`
-      : ''
+    const messageLine = `%0A${message
+      .replace(/\r\n|\n|\r/g, '%0A')
+      .split(' ')
+      .join('%20')}`
 
-    const finalMessage = `${BASE_URL}?text=Olá%20equipa%20Impec%20Clean,%0A%0A${nameLine}${emailLine}${messageLine}`
+    const finalMessage = `${baseUrl}Olá%20equipa%20Impec%20Clean,%0A%0A${nameLine}${phoneLine}${emailLine}${messageLine}`
 
-    if (
-      nameRef.current &&
-      emailRef.current &&
-      messageRef.current &&
-      linkRef.current
-    ) {
+    if (linkRef.current) {
       linkRef.current.href = finalMessage
+      linkRef.current.rel = 'noreferrer'
       linkRef.current.click()
-
-      nameRef.current.value = ''
-      emailRef.current.value = ''
-      messageRef.current.value = ''
     }
-  }, [])
+  }
 
   return (
     <div id="contact-form">
       <GraphicArticle.Root>
         <GraphicArticle.ContentRoot>
           <h2>Contacte-nos</h2>
-          <p>Não encontra o que procura? Deixe-nos o seu e-mail abaixo.</p>
-          <form className="flex flex-col gap-6 mt-4" onSubmit={handleSubmit}>
-            <div className="grid w-full items-center gap-1.5">
-              <Label htmlFor="name">Nome</Label>
-              <Input
+          <p>Não encontra o que procura? Deixe-nos uma mensagem.</p>
+          <Form {...form}>
+            <form
+              onSubmit={form.handleSubmit(onSubmit)}
+              className="flex flex-col gap-4"
+            >
+              <FormField
+                control={form.control}
                 name="name"
-                id="name"
-                className="border border-black"
-                ref={nameRef}
-                required
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Nome</FormLabel>
+                    <FormControl>
+                      <Input {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
               />
-            </div>
-
-            <div className="grid w-full items-center gap-1.5">
-              <Label htmlFor="email">Email</Label>
-              <Input
+              <FormField
+                control={form.control}
                 name="email"
-                type="email"
-                id="email"
-                className="border border-black"
-                ref={emailRef}
-                required
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>E-mail</FormLabel>
+                    <FormControl>
+                      <Input {...field} type="email" />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
               />
-            </div>
-
-            <div className="grid w-full items-center gap-1.5">
-              <Label htmlFor="message">Mensagem</Label>
-              <Textarea
+              <FormField
+                control={form.control}
+                name="phone"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Telefone</FormLabel>
+                    <FormControl>
+                      <Input {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
                 name="message"
-                id="message"
-                className="border border-black h-40"
-                ref={messageRef}
-                placeholder="Escreva aqui a sua mensagem..."
-                required
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Mensagem</FormLabel>
+                    <FormControl>
+                      <Textarea {...field} className="h-40" />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
               />
-            </div>
-
-            <Button type="submit">Submeter</Button>
-          </form>
+              <FormField
+                control={form.control}
+                name="sendType"
+                defaultValue="wtsp"
+                render={({ field }) => (
+                  <FormItem className="items-start">
+                    <FormLabel>Enviar por</FormLabel>
+                    <FormControl>
+                      <RadioGroup
+                        onValueChange={field.onChange}
+                        defaultValue={field.value}
+                        className="flex gap-4 items-center"
+                      >
+                        <FormItem className="flex items-center space-x-3 space-y-0">
+                          <FormControl>
+                            <RadioGroupItem value="wtsp" />
+                          </FormControl>
+                          <FormLabel className="font-normal">
+                            WhatsApp
+                          </FormLabel>
+                        </FormItem>
+                        <FormItem className="flex items-center space-x-3 space-y-0">
+                          <FormControl>
+                            <RadioGroupItem value="email" />
+                          </FormControl>
+                          <FormLabel className="font-normal">E-mail</FormLabel>
+                        </FormItem>
+                      </RadioGroup>
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <Button className="mt-6" size="lg" type="submit">
+                Enviar
+              </Button>
+            </form>
+          </Form>
         </GraphicArticle.ContentRoot>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2985.334010006714!2d-8.410869584282961!3d41.56201519311364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd24ffe6fd03329f%3A0x259c35b977af95e5!2sImpec%20Clean!5e0!3m2!1spt-PT!2scv!4v1677152754839!5m2!1spt-PT!2scv"
