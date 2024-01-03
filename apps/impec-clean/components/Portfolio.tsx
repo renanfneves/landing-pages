@@ -6,7 +6,7 @@ import PortfolioIII from '../assets/portfolio-3.png'
 import PortfolioIV from '../assets/portfolio-4.png'
 import PortfolioV from '../assets/portfolio-5.webp'
 import { useKeenSlider } from 'keen-slider/react'
-import { MutableRefObject, useCallback } from 'react'
+import { MutableRefObject, useCallback, useLayoutEffect, useState } from 'react'
 
 const CARDS = [
   PortfolioII.src,
@@ -16,6 +16,12 @@ const CARDS = [
 ]
 
 export function Portfolio() {
+  const [isClient, setIsClient] = useState(false)
+
+  useLayoutEffect(() => {
+    setIsClient(true)
+  }, [])
+
   const thumbnailPlugin = useCallback((mainRef: MutableRefObject<any>) => {
     return (slider: any) => {
       function removeActive() {
@@ -63,34 +69,38 @@ export function Portfolio() {
     [thumbnailPlugin(instanceRef)],
   )
   return (
-    <section
-      id="portfolio"
-      className="w-full md:w-1/2 md:self-center h-screen gap-8 flex flex-col items-center justify-center"
-    >
-      <h2>Portfólio</h2>
-      <p>Descubra a Nossa Experiência em Transformar Espaços.</p>
-      <div ref={sliderRef} className="keen-slider">
-        {CARDS.map((img, i) => (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
-            src={img}
-            alt=""
-            key={i}
-            className="keen-slider__slide object-fill rounded-md "
-          />
-        ))}
-      </div>
-      <div ref={thumbnailRef} className="keen-slider thumbnail">
-        {CARDS.map((img, i) => (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
-            src={img}
-            alt=""
-            key={i}
-            className="keen-slider__slide object-fill rounded-md"
-          />
-        ))}
-      </div>
-    </section>
+    <>
+      {isClient && (
+        <section
+          id="portfolio"
+          className="w-full md:w-1/2 md:self-center h-screen gap-8 flex flex-col items-center justify-center"
+        >
+          <h2>Portfólio</h2>
+          <p>Descubra a Nossa Experiência em Transformar Espaços.</p>
+          <div ref={sliderRef} className="keen-slider">
+            {CARDS.map((img, i) => (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={img}
+                alt=""
+                key={i}
+                className="keen-slider__slide object-fill rounded-md"
+              />
+            ))}
+          </div>
+          <div ref={thumbnailRef} className="keen-slider thumbnail">
+            {CARDS.map((img, i) => (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={img}
+                alt=""
+                key={i}
+                className="keen-slider__slide object-fill rounded-md"
+              />
+            ))}
+          </div>
+        </section>
+      )}
+    </>
   )
 }

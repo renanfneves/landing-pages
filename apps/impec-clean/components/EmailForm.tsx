@@ -71,6 +71,7 @@ export function EmailForm() {
       linkRef.current.href = finalMessage
       linkRef.current.rel = 'noreferrer'
       linkRef.current.click()
+      form.reset()
     }
   }
 
