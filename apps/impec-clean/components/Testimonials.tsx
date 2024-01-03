@@ -63,10 +63,10 @@ export function Testimonials() {
 
   const [sliderRef] = useKeenSlider<HTMLDivElement>({
     breakpoints: {
-      '(min-width: 400px)': {
+      '(min-width: 600px)': {
         slides: { perView: 2, spacing: 5 },
       },
-      '(min-width: 1000px)': {
+      '(min-width: 992px)': {
         slides: { perView: 3, spacing: 10 },
       },
     },
@@ -77,7 +77,7 @@ export function Testimonials() {
       {isClient && (
         <section
           id="testemunhos"
-          className="flex flex-col items-center gap-8 md:h-[60vh] justify-center"
+          className="flex flex-col items-center gap-8 lg:h-[60vh] justify-center w-[95%] mx-auto"
         >
           <h2 className="self-start md:self-center">Testemunhos</h2>
           <p>Descubra a Nossa Experiência em Transformar Espaços.</p>

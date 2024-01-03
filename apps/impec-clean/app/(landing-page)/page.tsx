@@ -14,7 +14,7 @@ export default async function LandingPage() {
   return (
     <main>
       <ImpecHero />
-      <div className="mt-8 flex flex-col container gap-32 overflow-hidden">
+      <div className="mt-8 flex flex-col container gap-16 md:gap-32 overflow-hidden">
         <Testimonials />
         <AboutUs />
         <Awards />
