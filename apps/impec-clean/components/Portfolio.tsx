@@ -84,7 +84,7 @@ export function Portfolio() {
                 src={img}
                 alt=""
                 key={i}
-                className="keen-slider__slide object-fill rounded-md"
+                className="keen-slider__slide object-cover lg:object-fill rounded-md"
               />
             ))}
           </div>
@@ -95,7 +95,7 @@ export function Portfolio() {
                 src={img}
                 alt=""
                 key={i}
-                className="keen-slider__slide object-fill rounded-md"
+                className="keen-slider__slide object-cover lg:object-fill rounded-md"
               />
             ))}
           </div>
