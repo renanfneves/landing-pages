@@ -3,6 +3,7 @@
 import z from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
+import { PatternFormat } from 'react-number-format'
 
 import {
   Button,
@@ -19,7 +20,7 @@ import {
   Textarea,
 } from '@landing-pages/ui-library'
 
-import { useRef } from 'react'
+import { forwardRef, useRef } from 'react'
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -36,6 +37,17 @@ const formSchema = z.object({
 const WTSP_BASE_URL = 'http://wa.me/+351932270602?text='
 const EMAIL_BASE_URL =
   'mailto:impec.clean@outlook.com?subject=Olá%20venho%20pelo%20site&body='
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const CustomInput = forwardRef((props: any, ref: any) => (
+  <PatternFormat
+    {...props}
+    getInputRef={ref}
+    className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+    mask="_"
+  />
+))
+CustomInput.displayName = 'phone-input'
 
 export function EmailForm() {
   const linkRef = useRef<HTMLAnchorElement>(null)
@@ -119,7 +131,7 @@ export function EmailForm() {
                   <FormItem>
                     <FormLabel>Telefone</FormLabel>
                     <FormControl>
-                      <Input {...field} />
+                      <CustomInput {...field} format="+351 ### ### ###" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>

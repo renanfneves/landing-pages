@@ -1,18 +1,18 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
 
-import PortfolioII from '../assets/portfolio-2.png'
-import PortfolioIII from '../assets/portfolio-3.png'
+import PortfolioI from '../assets/portfolio-1.webp'
+import PortfolioII from '../assets/portfolio-2.webp'
+import PortfolioIII from '../assets/portfolio-3.webp'
 import PortfolioIV from '../assets/portfolio-4.png'
-import PortfolioV from '../assets/portfolio-5.webp'
 import { useKeenSlider } from 'keen-slider/react'
 import { MutableRefObject, useCallback, useLayoutEffect, useState } from 'react'
 
 const CARDS = [
+  PortfolioI.src,
   PortfolioII.src,
   PortfolioIII.src,
   PortfolioIV.src,
-  PortfolioV.src,
 ]
 
 export function Portfolio() {
