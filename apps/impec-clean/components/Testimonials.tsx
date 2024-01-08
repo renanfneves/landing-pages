@@ -47,21 +47,25 @@ const testimonialsData = [
       'Adorei, o sofá ficou novo mesmo e com um cheirinho muito bom. Profissionais e muito simpáticos',
     author: 'Isabel Oliveira',
   },
-  {
-    starsGiven: 5,
-    comment: 'Super profissionais! O meu sofá ficou como novo.',
-    author: 'Vanessa Araujo',
-  },
 ]
 
 export function Testimonials() {
   const [isClient, setIsClient] = useState(false)
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [loaded, setLoaded] = useState(false)
 
   useLayoutEffect(() => {
     setIsClient(true)
   }, [])
 
-  const [sliderRef] = useKeenSlider<HTMLDivElement>({
+  const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
+    initial: 0,
+    slideChanged(slider) {
+      setCurrentSlide(slider.track.details.rel)
+    },
+    created() {
+      setLoaded(true)
+    },
     breakpoints: {
       '(min-width: 600px)': {
         slides: { perView: 2, spacing: 5 },
@@ -77,11 +81,11 @@ export function Testimonials() {
       {isClient && (
         <section
           id="testemunhos"
-          className="flex flex-col items-center gap-8 lg:h-[60vh] justify-center w-[95%] mx-auto"
+          className="flex flex-col items-center gap-8 justify-center w-[95%] mx-auto"
         >
           <h2 className="self-start md:self-center">Testemunhos</h2>
           <p>Descubra a Nossa Experiência em Transformar Espaços.</p>
-          <div className="flex relative w-carousel sm:w-carousel-md overflow-y-hidden overflow-x-scroll gap-16 snap-mandatory hidden-scrollbar">
+          <div className="flex flex-col relative w-carousel sm:w-carousel-md overflow-y-hidden overflow-x-scroll gap-8 snap-mandatory hidden-scrollbar">
             <div className="keen-slider" ref={sliderRef}>
               {testimonialsData.map((data, i) => (
                 <div className="keen-slider__slide" key={i}>
@@ -93,6 +97,28 @@ export function Testimonials() {
                 </div>
               ))}
             </div>
+            {loaded && instanceRef.current && (
+              <div className="flex justify-center py-2">
+                {[
+                  ...Array(
+                    instanceRef.current.track.details.slides.length,
+                  ).keys(),
+                ].map((idx) => {
+                  return (
+                    <button
+                      key={idx}
+                      onClick={() => {
+                        instanceRef.current?.moveToIdx(idx)
+                      }}
+                      className={
+                        'border-none w-3 h-3 bg-gray-400 rounded-[50%] mx-2 p-2 cursor-pointer focus:outline-none' +
+                        (currentSlide === idx ? ' bg-black' : '')
+                      }
+                    ></button>
+                  )
+                })}
+              </div>
+            )}
           </div>
         </section>
       )}
