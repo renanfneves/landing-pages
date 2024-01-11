@@ -2,7 +2,7 @@
 
 import { TestimonialCard } from '@landing-pages/ui-library'
 import { useKeenSlider } from 'keen-slider/react'
-import { useLayoutEffect, useState } from 'react'
+import { useLayoutEffect, useMemo, useState } from 'react'
 
 const testimonialsData = [
   {
@@ -74,6 +74,7 @@ export function Testimonials() {
         slides: { perView: 3, spacing: 10 },
       },
     },
+    loop: true,
     slides: { perView: 1 },
   })
   return (
@@ -114,7 +115,7 @@ export function Testimonials() {
                         'border-none w-3 h-3 bg-gray-400 rounded-[50%] mx-2 p-2 cursor-pointer focus:outline-none' +
                         (currentSlide === idx ? ' bg-black' : '')
                       }
-                    ></button>
+                    />
                   )
                 })}
               </div>
