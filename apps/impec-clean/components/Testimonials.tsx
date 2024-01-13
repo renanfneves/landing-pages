@@ -2,7 +2,7 @@
 
 import { TestimonialCard } from '@landing-pages/ui-library'
 import { useKeenSlider } from 'keen-slider/react'
-import { useLayoutEffect, useMemo, useState } from 'react'
+import { useLayoutEffect, useState } from 'react'
 
 const testimonialsData = [
   {
