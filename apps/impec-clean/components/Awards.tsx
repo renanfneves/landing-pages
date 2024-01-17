@@ -4,7 +4,7 @@ import BestCustomerServiceAward from '../assets/best-customer-service.webp'
 
 export function Awards() {
   return (
-    <article className="flex flex-col items-center w-full gap-16 py-4 md:py-8">
+    <article className="flex flex-col items-center w-full gap-16 pb-4">
       <h2>A Impec Clean em Destaque</h2>
       <section className="flex flex-col md:flex-row gap-4 items-center justify-evenly w-full">
         <Image
