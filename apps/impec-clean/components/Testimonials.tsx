@@ -1,6 +1,6 @@
 'use client'
 
-import { TestimonialCard } from '@landing-pages/ui-library'
+import { TestimonialCard, cn } from '@landing-pages/ui-library'
 import { useKeenSlider } from 'keen-slider/react'
 import { useLayoutEffect, useState } from 'react'
 
@@ -111,10 +111,10 @@ export function Testimonials() {
                       onClick={() => {
                         instanceRef.current?.moveToIdx(idx)
                       }}
-                      className={
-                        'border-none w-3 h-3 bg-gray-400 rounded-[50%] mx-2 p-2 cursor-pointer focus:outline-none' +
-                        (currentSlide === idx ? ' bg-black' : '')
-                      }
+                      className={cn(
+                        'border-none w-3 h-3 rounded-[50%] mx-2 p-2 cursor-pointer focus:outline-none',
+                        currentSlide === idx ? ' bg-black' : ' bg-gray-400',
+                      )}
                     />
                   )
                 })}
