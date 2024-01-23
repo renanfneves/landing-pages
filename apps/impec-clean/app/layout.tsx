@@ -28,8 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <GoogleTagManager gtmId="G-56LY18MTWE" />
-        <GoogleAnalytics gaId="AW-314025232" />
+        <GoogleTagManager gtmId="AW-314025232" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
