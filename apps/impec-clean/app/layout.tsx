@@ -2,13 +2,20 @@
 import { Roboto_Flex as Roboto } from 'next/font/google'
 import { ImpecHeader } from '../components/ImpecHeader'
 import { Footer } from '../components/Footer'
-import { GoogleAnalytics } from '@next/third-parties/google'
+import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
 
 import './global.css'
 
 export const metadata = {
   title: 'Impec Clean | Limpeza de Estofos',
   description: 'Limpeza de Estofos na Zona Norte',
+  openGraph: {
+    title: 'Impec Clean | Limpeza de Estofos',
+    description: 'Limpeza de Estofos na Zona Norte',
+  },
+  alternates: {
+    canonical: 'https://www.impecclean.pt/',
+  },
 }
 
 const roboto = Roboto({ subsets: ['latin'], variable: '--font-roboto' })
@@ -21,6 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <GoogleTagManager gtmId="G-56LY18MTWE" />
         <GoogleAnalytics gaId="AW-314025232" />
         <script
           dangerouslySetInnerHTML={{
