@@ -2,6 +2,7 @@
 import { Roboto_Flex as Roboto } from 'next/font/google'
 import { ImpecHeader } from '../components/ImpecHeader'
 import { Footer } from '../components/Footer'
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 import './global.css'
 
@@ -19,17 +20,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      {/* <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'AW-314025232');
-              `,
-          }}
-        />
+      <head>
+        <GoogleAnalytics gaId="AW-314025232" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -46,6 +38,12 @@ export default function RootLayout({
               `,
           }}
         />
+      </head>
+
+      <body
+        className={`relative ${roboto.className} overflow-x-hidden`}
+        suppressHydrationWarning={true}
+      >
         <img
           height="1"
           width="1"
@@ -53,12 +51,6 @@ export default function RootLayout({
           style={{ display: 'none' }}
           src="https://www.facebook.com/tr?id=317290567186879&amp;ev=PageView&amp;noscript=1"
         />
-      </head> */}
-
-      <body
-        className={`relative ${roboto.className} overflow-x-hidden`}
-        suppressHydrationWarning={true}
-      >
         <ImpecHeader />
         {children}
         <Footer />
