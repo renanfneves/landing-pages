@@ -52,6 +52,7 @@ export default function RootLayout({
         className={`relative ${roboto.className} overflow-x-hidden`}
         suppressHydrationWarning={true}
       >
+        <h2 className="absolute top-0 left-0 -z-10 invisible">impecclean</h2>
         <img
           height="1"
           width="1"
