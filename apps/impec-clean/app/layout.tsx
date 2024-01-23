@@ -2,7 +2,7 @@
 import { Roboto_Flex as Roboto } from 'next/font/google'
 import { ImpecHeader } from '../components/ImpecHeader'
 import { Footer } from '../components/Footer'
-import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
+import { GoogleTagManager } from '@next/third-parties/google'
 
 import './global.css'
 
