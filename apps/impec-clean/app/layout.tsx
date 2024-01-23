@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
+      {/* <head>
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -53,7 +53,7 @@ export default function RootLayout({
           style={{ display: 'none' }}
           src="https://www.facebook.com/tr?id=317290567186879&amp;ev=PageView&amp;noscript=1"
         />
-      </head>
+      </head> */}
 
       <body
         className={`relative ${roboto.className} overflow-x-hidden`}
