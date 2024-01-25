@@ -8,7 +8,7 @@ export function AboutUs() {
     <GraphicArticle.Root>
       <GraphicArticle.ContentRoot>
         <h3 className="text-sm font-bold">Excelência</h3>
-        <h2>Serviços de Limpeza Profissional para Estofos e Carpetes</h2>
+        <h2>Serviços de Limpeza Premium para Estofos e Carpetes</h2>
         <p>
           A Impec Clean oferece serviços de limpeza, higienização e desinfecção
           de estofos e carpetes com qualidade, eficiência e atendimento
