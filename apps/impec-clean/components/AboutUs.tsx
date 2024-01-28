@@ -51,10 +51,10 @@ export function AboutUs() {
             </p>
           </li>
         </ul>
-        <section className="flex justify-center items-center p-8">
-          <Button variant="secondary" size="lg" asChild>
+        <section className="flex justify-center items-center">
+          <Button variant="secondary" asChild>
             <a
-              className="flex-center flex-col gap-4 font-bold text-white"
+              className="flex-center flex-col gap-4 font-bold text-white text-[0.8rem] md:text-base"
               href="http://wa.me/+351932270602?text=Olá%20equipa%20Impec%20Clean,%20vim%20através%20do%20site.%0A%0AGostaria%20de%20agendar%20uma%20limpeza%20com%20a%20Impec%20Clean"
               target="_blank"
               rel="noreferrer"

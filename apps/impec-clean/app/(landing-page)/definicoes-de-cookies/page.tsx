@@ -27,7 +27,7 @@ export default function page() {
         as suas preferências.
       </p>
 
-      <h2 className="text-base font-semibold">Tipos de cookies</h2>
+      <h2 className="text-base font-bold uppercase mb-4">Tipos de cookies</h2>
 
       <h2 className="text-base font-semibold">Cookies de Preferências</h2>
       <p className="mb-8 mt-4">
