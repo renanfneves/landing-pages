@@ -1,6 +1,8 @@
+import { cn } from '../../../utils'
 import Image from 'next/image'
+import { ComponentProps } from 'react'
 
-interface GraphicArticleImageProps {
+interface GraphicArticleImageProps extends ComponentProps<'figure'> {
   src: string
   description: string
 }
@@ -8,9 +10,12 @@ interface GraphicArticleImageProps {
 export function GraphicArticleImage({
   src,
   description,
+  className,
 }: GraphicArticleImageProps) {
   return (
-    <figure className="relative w-full h-80 md:w-1/2 md:h-[500px]">
+    <figure
+      className={cn('relative w-full h-80 md:w-1/2 md:h-[500px]', className)}
+    >
       <Image
         fill
         src={src}
