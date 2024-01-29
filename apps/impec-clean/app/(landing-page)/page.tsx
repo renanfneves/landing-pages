@@ -19,8 +19,8 @@ export default async function LandingPage() {
         <AboutUs />
         <Awards />
         <Services />
-        <ProtectYourSofa />
         <ContactUs />
+        <ProtectYourSofa />
         <ImpecTeam />
         <Portfolio />
         <EmailForm />

@@ -4,7 +4,7 @@ import Banner from '../assets/banner-contactus.webp'
 export function ContactUs() {
   return (
     <article
-      className="w-full flex flex-col p-4 md:p-16 items-start justify-center bg-contain md:bg-cover rounded-md"
+      className="w-[calc(100%+3rem)] ml-[-1.5rem] md:ml-0 md:w-full flex flex-col p-4 md:p-16 items-start justify-center bg-contain md:bg-cover rounded-md"
       style={{
         backgroundImage: `url(${Banner.src})`,
       }}

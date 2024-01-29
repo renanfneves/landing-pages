@@ -12,9 +12,15 @@ export const metadata = {
   openGraph: {
     title: 'Impec Clean | Limpeza de Estofos',
     description: 'Limpeza de Estofos na Zona Norte',
+    images: '/og-image.webp',
   },
   alternates: {
     canonical: 'https://www.impecclean.pt/',
+  },
+  twitter: {
+    title: 'Impec Clean | Limpeza de Estofos',
+    description: 'Limpeza de Estofos na Zona Norte',
+    images: ['www.impecclean.pt/og-image.webp'],
   },
 }
 

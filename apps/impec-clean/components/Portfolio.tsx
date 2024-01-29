@@ -74,7 +74,7 @@ export function Portfolio() {
       {isClient && (
         <section
           id="portfolio"
-          className="w-full md:w-1/2 h-screen md:self-center gap-8 flex flex-col items-center justify-center"
+          className="w-full py-4 md:py-0 md:w-1/2 md:h-screen md:self-center gap-8 flex flex-col items-center justify-center"
         >
           <h2>Portfólio</h2>
           <p>Descubra a Nossa Experiência em Transformar Espaços.</p>
