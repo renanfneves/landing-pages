@@ -7,12 +7,17 @@ import { GoogleTagManager } from '@next/third-parties/google'
 import './global.css'
 
 export const metadata = {
+  metadataBase: new URL('https://impecclean.pt'),
   title: 'Impec Clean | Limpeza de Estofos',
   description: 'Limpeza de Estofos na Zona Norte',
   openGraph: {
     title: 'Impec Clean | Limpeza de Estofos',
     description: 'Limpeza de Estofos na Zona Norte',
-    images: '/og-image.webp',
+    images: {
+      url: '/og-image.webp',
+      width: 800,
+      height: 600,
+    },
   },
   alternates: {
     canonical: 'https://www.impecclean.pt/',
@@ -20,7 +25,13 @@ export const metadata = {
   twitter: {
     title: 'Impec Clean | Limpeza de Estofos',
     description: 'Limpeza de Estofos na Zona Norte',
-    images: ['www.impecclean.pt/og-image.webp'],
+    images: [
+      {
+        url: '/og-image.webp',
+        width: 800,
+        height: 600,
+      },
+    ],
   },
 }
 
