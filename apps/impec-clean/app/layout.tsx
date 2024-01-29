@@ -8,28 +8,28 @@ import './global.css'
 
 export const metadata = {
   metadataBase: new URL('https://impecclean.pt'),
-  title: 'Impec Clean | Limpeza de Estofos',
-  description: 'Limpeza de Estofos na Zona Norte',
+  title: 'Impec Clean | Higienização de Estofos, Colchões e Carpetes',
+  description: 'Higienização de Estofos, Colchões e Carpetes',
   openGraph: {
-    title: 'Impec Clean | Limpeza de Estofos',
-    description: 'Limpeza de Estofos na Zona Norte',
+    title: 'Impec Clean | Higienização de Estofos, Colchões e Carpetes',
+    description: 'Higienização de Estofos, Colchões e Carpetes',
     images: {
-      url: '/og-image.webp',
-      width: 800,
-      height: 600,
+      url: '/og-image.png',
+      width: 1200,
+      height: 630,
     },
   },
   alternates: {
     canonical: 'https://www.impecclean.pt/',
   },
   twitter: {
-    title: 'Impec Clean | Limpeza de Estofos',
-    description: 'Limpeza de Estofos na Zona Norte',
+    title: 'Impec Clean | Higienização de Estofos, Colchões e Carpetes',
+    description: 'Higienização de Estofos, Colchões e Carpetes',
     images: [
       {
-        url: '/og-image.webp',
-        width: 800,
-        height: 600,
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
       },
     ],
   },
