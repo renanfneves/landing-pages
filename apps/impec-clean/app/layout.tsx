@@ -86,14 +86,6 @@ export default function RootLayout({
           style={{ display: 'none' }}
           src="https://www.facebook.com/tr?id=317290567186879&amp;ev=PageView&amp;noscript=1"
         />
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-T294SRCT"
-            height="0"
-            width="0"
-            style={{ display: 'none', visibility: 'hidden' }}
-          ></iframe>
-        </noscript>
         <ImpecHeader />
         {children}
         <Footer />
