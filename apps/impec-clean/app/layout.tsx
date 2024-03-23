@@ -45,7 +45,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <GoogleTagManager gtmId="AW-314025232" />
+        <GoogleTagManager gtmId="GTM-T294SRCT" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
