@@ -9,19 +9,41 @@ import {
 } from '@landing-pages/ui-library'
 import { FormEvent, useRef } from 'react'
 
-export function EmailForm() {
-  const nameRef = useRef<HTMLInputElement>(null)
-  const emailRef = useRef<HTMLInputElement>(null)
-  const messageRef = useRef<HTMLTextAreaElement>(null)
+const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  e.preventDefault()
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    console.log({
-      name: nameRef.current?.value,
-      email: emailRef.current?.value,
-      message: messageRef.current?.value,
-    })
-    e.preventDefault()
+  const name = nameRef.current?.value
+  const email = emailRef.current?.value
+  const message = messageRef.current?.value
+
+  if (!name || !email || !message) {
+    alert('Por favor, preencha todos os campos.')
+    return
   }
+
+  try {
+    const response = await fetch('https://hook.eu1.make.com/mnuoy9ief698gwh6ep63sgap3l5f0v7l', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ name, email, message }),
+    })
+
+    if (response.ok) {
+      alert('Mensagem enviada com sucesso!')
+      // Optionally clear the form
+      nameRef.current.value = ''
+      emailRef.current.value = ''
+      messageRef.current.value = ''
+    } else {
+      alert('Erro ao enviar a mensagem. Tente novamente.')
+    }
+  } catch (error) {
+    console.error('Erro ao enviar para o webhook:', error)
+    alert('Erro de rede ao enviar a mensagem.')
+  }
+}
 
   return (
     <div id="contact-form">
