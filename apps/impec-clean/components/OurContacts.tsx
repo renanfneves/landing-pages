@@ -5,11 +5,11 @@ import MapPin from '../assets/map-pin.svg'
 
 export function OurContacts() {
   return (
-    <article className="flex items-start justify-center flex-wrap w-full py-16 gap-8">
+    <article className="flex items-start justify-center flex-wrap w-full md:py-16 gap-8">
       <address className="flex items-center flex-col gap-4 w-100 md:h-44">
         <a
           className="flex-center flex-col gap-4"
-          href="mailto:john@doe.com"
+          href="mailto:impec.clean@outlook.com"
           target="_blank"
           rel="noreferrer"
         >
@@ -17,11 +17,11 @@ export function OurContacts() {
           <span>Email</span>
         </a>
         <p className="text-center">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          varius enim in ero.
+          Envie-nos um email para tirar a suas dúvidas e solicitar um orçamento
+          gratuitamente
         </p>
         <address className="mt-auto underline text-sm">
-          geral@rimpecclean.pt
+          impec.clean@outlook.com
         </address>
       </address>
       <address className="flex items-center flex-col gap-4 w-100 md:h-44">
@@ -32,11 +32,11 @@ export function OurContacts() {
           rel="noreferrer"
         >
           <Image src={Phone} width={30} height={30} alt="Impec Clean phone" />
-          <span>Whatsapp</span>
+          <span>WhatsApp</span>
         </a>
         <p className="text-center">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          varius enim in ero.
+          Mande-nos mensagem nos WhatsApp para agendar um serviço de Limpeza e
+          Higienização à sua escolha
         </p>
         <address className="mt-auto underline text-sm">
           +(351) 932-270-602

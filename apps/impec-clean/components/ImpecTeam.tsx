@@ -1,18 +1,26 @@
 import { GraphicArticle } from '@landing-pages/ui-library'
-import BackgroundImage from '../assets/team-image.png'
+import BackgroundImage from '../assets/team-image.webp'
+import Image from 'next/image'
 
 export function ImpecTeam() {
   return (
-    <GraphicArticle.Root className="flex-col-reverse">
-      <GraphicArticle.Image
-        src={BackgroundImage.src}
-        description="Serviços oferecidos pela Impec Clean"
-      />
+    <GraphicArticle.Root className="flex-col-reverse justify-center">
+      <figure className="relative w-[18rem] h-[18rem] md:w-[20rem] md:h-[20rem] rounded-full overflow-hidden">
+        <Image
+          fill
+          src={BackgroundImage.src}
+          alt="Serviços oferecidos pela Impec Clean"
+          priority={true}
+          sizes="100vw"
+          className="object-cover rounded-md aspect-video"
+        />
+      </figure>
+
       <GraphicArticle.ContentRoot>
         <h3 className="text-sm font-bold">Profissionalismo</h3>
-        <h2>A Força por Trás da ImpecClean</h2>
+        <h2>A Força por Trás da Impec Clean</h2>
         <p>
-          Juntos, somos a equipa dedicada da ImpecClean, apaixonados por trazer
+          Juntos, somos a equipa dedicada da Impec Clean, apaixonados por trazer
           uma nova vida aos seus estofos e cuidar da saúde do seu lar.
           Combinamos a nossa experiência e conhecimento para garantir que cada
           trabalho seja executado com precisão e cuidado. A nossa dedicação em
@@ -20,22 +28,6 @@ export function ImpecTeam() {
           realizamos. Estamos ansiosos para trabalhar consigo e mostrar como a
           limpeza profunda pode transformar o ambiente da sua casa.
         </p>
-        <div className="flex flex-col sm:grid sm:grid-cols-2 gap-4">
-          <div className="w-full">
-            <h6 className="mb-2 font-semibold">Mayumi</h6>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros.
-            </p>
-          </div>
-          <div className="w-full">
-            <h6 className="mb-2 font-semibold">Douglas</h6>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros.
-            </p>
-          </div>
-        </div>
       </GraphicArticle.ContentRoot>
     </GraphicArticle.Root>
   )

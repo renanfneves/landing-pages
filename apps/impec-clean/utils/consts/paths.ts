@@ -11,7 +11,7 @@ export const PATHS = [
   },
   {
     key: 'portfolio',
-    path: '#portifolio',
-    label: 'Portifólio',
+    path: '#portfolio',
+    label: 'Portfólio',
   },
 ]

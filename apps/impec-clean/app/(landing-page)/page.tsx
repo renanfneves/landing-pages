@@ -1,4 +1,3 @@
-import { ImpecHeader } from '../../components/ImpecHeader'
 import { ImpecHero } from '../../components/ImpecHero'
 import { AboutUs } from '../../components/AboutUs'
 import { Testimonials } from '../../components/Testimonials'
@@ -8,23 +7,24 @@ import { Portfolio } from '../../components/Portfolio'
 import { ImpecTeam } from '../../components/ImpecTeam'
 import { EmailForm } from '../../components/EmailForm'
 import { OurContacts } from '../../components/OurContacts'
-import { Footer } from '../../components/Footer'
+import { ProtectYourSofa } from '../../components/ProtectYourSofa'
+import { Awards } from '../../components/Awards'
 
 export default async function LandingPage() {
   return (
     <main>
-      <ImpecHeader />
       <ImpecHero />
-      <div className="flex flex-col container gap-16 overflow-hidden">
+      <div className="mt-8 flex flex-col container gap-16 md:gap-24 overflow-hidden">
         <Testimonials />
         <AboutUs />
+        <Awards />
         <Services />
         <ContactUs />
-        <Portfolio />
+        <ProtectYourSofa />
         <ImpecTeam />
+        <Portfolio />
         <EmailForm />
         <OurContacts />
-        <Footer />
       </div>
     </main>
   )

@@ -11,7 +11,7 @@ export function HeroCallToAction({
   asChild,
 }: HeroCallToActionProps) {
   return (
-    <Button variant="outline" onClick={onClick} asChild={asChild}>
+    <Button variant="secondary" onClick={onClick} asChild={asChild} size="lg">
       {children}
     </Button>
   )
