@@ -22,17 +22,18 @@ import {
 
 import { forwardRef, useRef } from 'react'
 
+const WEBHOOK_URL = 'https://hook.eu1.make.com/mnuoy9ief698gwh6ep63sgap3l5f0v7l'
+
 const formSchema = z.object({
-  name: z.string().min(2, {
-    message: 'Seu nome deve conter ao menos duas letras',
-  }),
-  email: z.string(),
-  phone: z.string(),
-  message: z.string().min(1, {
-    message: 'Por favor, deixe-nos uma mensagem',
-  }),
+  name: z.string().min(2, { message: 'Seu nome deve conter ao menos duas letras' }),
+  email: z.string().email('E-mail inválido').optional(),
+  phone: z.string().optional(),
+  message: z.string().min(1, { message: 'Por favor, deixe-nos uma mensagem' }),
   sendType: z.enum(['wtsp', 'email']),
-})
+}).refine(
+  (data) => (data.sendType === 'email' ? Boolean(data.email) : true),
+  { message: 'E-mail é obrigatório quando seleciona “E-mail”', path: ['email'] }
+)
 
 const WTSP_BASE_URL = 'http://wa.me/+351932270602?text='
 const EMAIL_BASE_URL =
@@ -65,26 +66,57 @@ export function EmailForm() {
   function onSubmit(values: z.infer<typeof formSchema>) {
     const { name, email, phone, message, sendType } = values
 
-    const nameLine = `Me%20chamo%20${name.split(' ').join('%20')}%0A`
-
+    const nameLine = `Me%20chamo%20${name.trim().split(' ').join('%20')}%0A`
     const emailLine = email ? `${email}%0A` : ''
     const phoneLine = phone ? `${phone}%0A` : ''
-
-    const baseUrl = sendType === 'email' ? EMAIL_BASE_URL : WTSP_BASE_URL
-
-    const messageLine = `%0A${message
-      .replace(/\r\n|\n|\r/g, '%0A')
-      .split(' ')
-      .join('%20')}`
-
+    const baseUrl = sendType === 'email'
+      ? 'mailto:impec.clean@outlook.com?subject=Olá%20venho%20pelo%20site&body='
+      : 'http://wa.me/+351932270602?text='
+    const messageLine = `%0A${message.replace(/\r\n|\n|\r/g, '%0A').split(' ').join('%20')}`
     const finalMessage = `${baseUrl}Olá%20equipa%20Impec%20Clean,%0A%0A${nameLine}${phoneLine}${emailLine}${messageLine}`
 
-    if (linkRef.current) {
-      linkRef.current.href = finalMessage
-      linkRef.current.rel = 'noreferrer'
-      linkRef.current.click()
-      form.reset()
+    const payload = {
+      name,
+      email: email ?? '',
+      phone: (phone ?? '').replace(/\s/g, ''),
+      message,
+      sendType,    
+      source: 'landing-page',
+      submittedAt: new Date().toISOString(),
+      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : '',
+      url: typeof location !== 'undefined' ? location.href : '',
     }
+
+      const sendWebhook = async () => {
+      const controller = new AbortController()
+      const timeout = setTimeout(() => controller.abort(), 4000) // don’t hang UX
+
+      try {
+        await fetch(WEBHOOK_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+          keepalive: true,
+          signal: controller.signal,
+        })
+      } catch (err) {
+        console.error('Webhook error (likely CORS):', err)
+      } finally {
+        clearTimeout(timeout)
+      }
+  }
+
+  // fire-and-forget
+  void sendWebhook()
+
+  // proceed with your current behavior
+  if (linkRef.current) {
+    linkRef.current.href = finalMessage
+    linkRef.current.rel = 'noreferrer'
+    linkRef.current.click()
+    form.reset()
+  }
+}
   }
 
   return (
