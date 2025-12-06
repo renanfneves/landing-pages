@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { Roboto_Flex as Roboto } from 'next/font/google'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import { ImpecHeader } from '../components/ImpecHeader'
 import { Footer } from '../components/Footer'
 import { GoogleTagManager } from '@next/third-parties/google'
@@ -89,6 +90,7 @@ export default function RootLayout({
         <ImpecHeader />
         {children}
         <Footer />
+        <SpeedInsights />
       </body>
     </html>
   )
