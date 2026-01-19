@@ -78,7 +78,7 @@ export function Portfolio() {
         >
           <h2>Portfólio</h2>
           <p>Descubra a Nossa Experiência em Transformar Espaços.</p>
-          <div ref={sliderRef} className="keen-slider">
+          <div ref={sliderRef} className="keen-slider flex">
             {CARDS.map((img, i) => (
               <Image
                 src={img}
@@ -91,7 +91,7 @@ export function Portfolio() {
               />
             ))}
           </div>
-          <div ref={thumbnailRef} className="keen-slider thumbnail">
+          <div ref={thumbnailRef} className="keen-slider thumbnail flex">
             {CARDS.map((img, i) => (
               // eslint-disable-next-line @next/next/no-img-element
               <Image

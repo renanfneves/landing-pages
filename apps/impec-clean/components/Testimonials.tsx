@@ -86,8 +86,8 @@ export function Testimonials() {
         >
           <h2 className="self-start md:self-center">Testemunhos</h2>
           <p>Descubra a Nossa Experiência em Transformar Espaços.</p>
-          <div className="flex flex-col relative w-carousel sm:w-carousel-md overflow-y-hidden overflow-x-scroll gap-8 snap-mandatory hidden-scrollbar">
-            <div className="keen-slider" ref={sliderRef}>
+          <div className="relative w-carousel sm:w-carousel-md overflow-y-hidden overflow-x-scroll gap-8 snap-mandatory hidden-scrollbar">
+            <div className="keen-slider flex" ref={sliderRef}>
               {testimonialsData.map((data, i) => (
                 <div className="keen-slider__slide" key={i}>
                   <TestimonialCard

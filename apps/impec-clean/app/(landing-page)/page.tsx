@@ -2,6 +2,7 @@ import { ImpecHero } from '../../components/ImpecHero'
 import { AboutUs } from '../../components/AboutUs'
 import { Testimonials } from '../../components/Testimonials'
 import { Services } from '../../components/Services'
+import { ServicesCards } from '../../components/ServicesCards'
 import { ContactUs } from '../../components/ContactUs'
 import { Portfolio } from '../../components/Portfolio'
 import { ImpecTeam } from '../../components/ImpecTeam'
@@ -16,6 +17,7 @@ export default async function LandingPage() {
       <ImpecHero />
       <div className="mt-8 flex flex-col container gap-16 md:gap-24 overflow-hidden">
         <Testimonials />
+        <ServicesCards />
         <AboutUs />
         <Awards />
         <Services />

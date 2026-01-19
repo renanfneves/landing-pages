@@ -6,8 +6,24 @@ export const PATHS = [
   },
   {
     key: 'services',
-    path: '#servicos',
     label: 'Serviços',
+    children: [
+      {
+        key: 'estofos',
+        path: '/servicos/estofos',
+        label: 'Higienização de Estofos',
+      },
+      {
+        key: 'colchoes',
+        path: '/servicos/colchoes',
+        label: 'Higienização de Colchões',
+      },
+      {
+        key: 'carpetes',
+        path: '/servicos/carpetes',
+        label: 'Higienização de Carpetes',
+      },
+    ],
   },
   {
     key: 'portfolio',
