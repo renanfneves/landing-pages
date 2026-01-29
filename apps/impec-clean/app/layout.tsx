@@ -3,6 +3,7 @@ import { Roboto_Flex as Roboto } from 'next/font/google'
 import { ImpecHeader } from '../components/ImpecHeader'
 import { Footer } from '../components/Footer'
 import { GoogleTagManager } from '@next/third-parties/google'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 import './global.css'
 
@@ -89,6 +90,7 @@ export default function RootLayout({
         <ImpecHeader />
         {children}
         <Footer />
+        <SpeedInsights />
       </body>
     </html>
   )
