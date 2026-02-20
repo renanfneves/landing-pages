@@ -3,8 +3,8 @@
   "style": "new-york",
   "rsc": false,
   "tailwind": {
-    "config": "apps/impec-clean/tailwind.config.js",
-    "css": "apps/impec-clean/app/global.css",
+    "config": "tailwind.config.js",
+    "css": "app/global.css",
     "baseColor": "stone",
     "cssVariables": true
   },

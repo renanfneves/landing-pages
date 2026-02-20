@@ -1,5 +1,5 @@
 import { Hero } from '@landing-pages/ui-library'
-import CarpetsImage from '../../../../assets/giorgio-trovato-5TXz228u4eo-unsplash.jpg'
+import CarpetsImage from '../../../../assets/carpets-service.webp'
 import { AboutUs } from '../../../../components/AboutUs'
 import { Testimonials } from '../../../../components/Testimonials'
 import { ContactUs } from '../../../../components/ContactUs'

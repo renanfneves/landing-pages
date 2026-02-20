@@ -40,9 +40,10 @@ const EMAIL_BASE_URL =
   'mailto:impec.clean@outlook.com?subject=Olá%20venho%20pelo%20site&body='
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const CustomInput = forwardRef<any, any>((props, ref) => (
+const CustomInput = forwardRef<any, any>(({ format = '### ### ###', ...props }, ref) => (
   <PatternFormat
     {...props}
+    format={format}
     getInputRef={ref}
     className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
     mask="_"

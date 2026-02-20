@@ -2,7 +2,6 @@
 /** @type {import('tailwindcss').Config} */
 
 const { fontFamily } = require('tailwindcss/defaultTheme')
-const { createGlobPatternsForDependencies } = require('@nx/react/tailwind')
 const { join } = require('path')
 
 module.exports = {
@@ -12,7 +11,7 @@ module.exports = {
       __dirname,
       '{src,pages,components,app}/**/*!(*.stories|*.spec).{ts,tsx,html}',
     ),
-    ...createGlobPatternsForDependencies(__dirname),
+    join(__dirname, 'libs/ui-library/src/**/*.{ts,tsx,html}'),
   ],
   theme: {
     container: {
